@@ -11,12 +11,35 @@
   :slots ())
 (defmethod hrp2jsknts-interface
   (:init (&rest args)
-    (prog1
-        (send-super* :init :robot hrp2jsknts-robot args)
-      ;; add controller
-      (dolist (limb '(:rarm :larm :rleg :lleg :head :torso))
-        (send self :def-limb-controller-method limb)
-        (send self :add-controller (read-from-string (format nil "~A-controller" limb)) :joint-enable-check t :create-actions t))))
+	 ;; add controller methods
+	 (dolist (limb '(:rarm :larm :rleg :lleg :head :torso))
+	   (eval `(defmethod ,(send (class self) :name)
+		    (,(read-from-string (format nil "~A-controller" limb))
+		     ()
+		     (list
+		      (list
+		       (cons :group-name ,(string-downcase limb))
+		       (cons :controller-action ,(format nil "~A_controller/follow_joint_trajectory_action" (string-downcase limb)))
+		       (cons :controller-state ,(format nil "~A_controller/state" (string-downcase limb)))
+		       (cons :action-type control_msgs::FollowJointTrajectoryAction)
+		       (cons :joint-names (list ,@(send-all (send (instance hrp2jsknts-robot :init) limb :joint-list) :name))))
+		      )))))
+
+	 (prog1
+	   (send-super* :init :robot hrp2jsknts-robot args)
+	   ;; add controller
+	   (dolist (limb '(:rarm :larm :rleg :lleg :head :torso))
+	     (send self :add-controller (read-from-string (format nil "~A-controller" limb)) :joint-enable-check t :create-actions nil)))
+	 )
+  (:default-controller
+   ()
+   (append
+    (send self :larm-controller)
+    (send self :rarm-controller)
+    (send self :lleg-controller)
+    (send self :rleg-controller)
+    (send self :head-controller)
+    (send self :torso-controller)))
   )
 
 (defun hrp2jsknts-init (&rest args)
