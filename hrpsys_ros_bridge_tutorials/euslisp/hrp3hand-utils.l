@@ -1,5 +1,7 @@
-(load "package://hrpsys_ros_bridge_tutorials/models/hrp3hand_l.l")
-(load "package://hrpsys_ros_bridge_tutorials/models/hrp3hand_r.l")
+#!/usr/bin/env roseus
+
+(load "package://hrpsys_ros_bridge_tutorials/models/hrp3hand_l")
+(load "package://hrpsys_ros_bridge_tutorials/models/hrp3hand_r")
 
 (defun get-hrp3hand-class-methods ()
   '(

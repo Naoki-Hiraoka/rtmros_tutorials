@@ -1,5 +1,7 @@
-(load "package://hrpsys_ros_bridge_tutorials/models/hrp2jsknts.l")
-(load "package://hrpsys_ros_bridge_tutorials/euslisp/hrp3hand-utils.l")
+#!/usr/bin/env roseus
+
+(load "package://hrpsys_ros_bridge_tutorials/models/hrp2jsknts")
+(load "package://hrpsys_ros_bridge_tutorials/euslisp/hrp3hand-utils" :entry "___hrp3hand_utils")
 
 (unless (assoc :init-org (send hrp2jsknts-robot :methods))
   (rplaca (assoc :init (send hrp2jsknts-robot :methods)) :init-org))
