@@ -62,12 +62,10 @@ head-end-coords:
   translate : [0.079, 0.0, 0.1335]
   rotate    : [0.0, 1.0, 0.0, 99.9999]
 rarm-end-coords:
-  translate : [-0.0042, 0.0392, -0.1245]
-  rotate    : [0.0, 1.0, 0.0, 90.0]
+  translate : [-0.0042, 0.0102, -0.2345]
   parent : RARM_LINK6
 larm-end-coords:
-  translate : [-0.0042, -0.0392, -0.1245]
-  rotate    : [0.0, 1.0, 0.0, 90.0]
+  translate : [-0.0042, -0.0102, -0.2345]
   parent : LARM_LINK6
 
 sensors:
