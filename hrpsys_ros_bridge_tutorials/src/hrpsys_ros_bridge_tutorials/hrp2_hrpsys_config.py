@@ -112,6 +112,14 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_leg_outside_margin=tmp_leg_outside_margin
         stp.eefm_leg_front_margin=tmp_leg_front_margin
         stp.eefm_leg_rear_margin=tmp_leg_rear_margin
+        tmp_arm_inside_margin=0.008
+        tmp_arm_outside_margin=0.008
+        tmp_arm_front_margin=0.041
+        tmp_arm_rear_margin=0.025
+        stp.eefm_arm_inside_margin=tmp_arm_inside_margin
+        stp.eefm_arm_outside_margin=tmp_arm_outside_margin
+        stp.eefm_arm_front_margin=tmp_arm_front_margin
+        stp.eefm_arm_rear_margin=tmp_arm_rear_margin
         rleg_vertices = [OpenHRP.StabilizerService.TwoDimensionVertex(pos=[tmp_leg_front_margin, tmp_leg_inside_margin]),
                          OpenHRP.StabilizerService.TwoDimensionVertex(pos=[tmp_leg_front_margin, -1*tmp_leg_outside_margin]),
                          OpenHRP.StabilizerService.TwoDimensionVertex(pos=[-1*tmp_leg_rear_margin, -1*tmp_leg_outside_margin]),
