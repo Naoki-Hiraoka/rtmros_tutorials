@@ -81,6 +81,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp=self.st_svc.getParameter()
         stp.st_algorithm=OpenHRP.StabilizerService.EEFMQPCOP
         #   eefm st params
+        stp.eefm_use_quaternion_body_attitude_control=True
         stp.eefm_body_attitude_control_gain=[1.5, 1.5]
         stp.eefm_body_attitude_control_time_const=[10000, 10000]
         # EEFM parameters for 4 limbs
