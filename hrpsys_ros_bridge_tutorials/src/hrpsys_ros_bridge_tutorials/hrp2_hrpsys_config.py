@@ -79,7 +79,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         self.abc_svc.setAutoBalancerParam(abcp)
         # ST parameters
         stp=self.st_svc.getParameter()
-        stp.st_algorithm=OpenHRP.StabilizerService.EEFMQPCOP
+        stp.st_algorithm=OpenHRP.StabilizerService.MCS
         #   eefm st params
         stp.eefm_use_quaternion_body_attitude_control=True
         stp.eefm_body_attitude_control_gain=[1.5, 1.5]
