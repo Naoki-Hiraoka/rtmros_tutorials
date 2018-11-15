@@ -150,6 +150,46 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         # for swing
         stp.eefm_swing_pos_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
+        # for MCS
+        stp.mcs_k1 = -445.08
+        stp.mcs_k2 = -266.15
+        stp.mcs_k3 = 0.17242
+        stp.mcs_ee_forcemoment_distribution_weight = [[1.0,1.0,1.0,0.01,0.01,0.01],[1.0,1.0,1.0,0.01,0.01,0.01],[0.1,0.1,0.1,0.001,0.001,0.001],[0.1,0.1,0.1,0.001,0.001,0.001]]
+        stp.mcs_body_attitude_control_gain = 1.5
+        stp.mcs_body_attitude_control_time_const = 10000
+        stp.mcs_rot_damping_gain = [[35,35,100000]] * 4
+        stp.mcs_rot_time_const = [[1.5,1.5,1.5]] * 4
+        stp.mcs_pos_damping_gain = [[3500*50,3500*50,9240]] * 4
+        stp.mcs_pos_time_const = [[1.5,1.5,1.5]] * 4
+        stp.mcs_contacteeforiginweight = [1.0,1.0,0.001,0.001]
+        stp.mcs_ccparams[0].friction_coefficient = 0.3
+        stp.mcs_ccparams[0].rotation_friction_coefficient = 0.3
+        stp.mcs_ccparams[0].upper_cop_x_margin = tmp_leg_front_margin
+        stp.mcs_ccparams[0].lower_cop_x_margin = tmp_leg_rear_margin
+        stp.mcs_ccparams[0].upper_cop_y_margin = tmp_leg_inside_margin
+        stp.mcs_ccparams[0].lower_cop_y_margin = tmp_leg_outside_margin
+        stp.mcs_ccparams[0].contact_decision_threshold = 25
+        stp.mcs_ccparams[1].friction_coefficient = 0.3
+        stp.mcs_ccparams[1].rotation_friction_coefficient = 0.3
+        stp.mcs_ccparams[1].upper_cop_x_margin = tmp_leg_front_margin
+        stp.mcs_ccparams[1].lower_cop_x_margin = tmp_leg_rear_margin
+        stp.mcs_ccparams[1].upper_cop_y_margin = tmp_leg_outside_margin
+        stp.mcs_ccparams[1].lower_cop_y_margin = tmp_leg_inside_margin
+        stp.mcs_ccparams[1].contact_decision_threshold = 25
+        stp.mcs_ccparams[2].friction_coefficient = 0.3
+        stp.mcs_ccparams[2].rotation_friction_coefficient = 0.3
+        stp.mcs_ccparams[2].upper_cop_x_margin = tmp_arm_front_margin
+        stp.mcs_ccparams[2].lower_cop_x_margin = tmp_arm_rear_margin
+        stp.mcs_ccparams[2].upper_cop_y_margin = tmp_arm_inside_margin
+        stp.mcs_ccparams[2].lower_cop_y_margin = tmp_arm_outside_margin
+        stp.mcs_ccparams[2].contact_decision_threshold = 10
+        stp.mcs_ccparams[3].friction_coefficient = 0.3
+        stp.mcs_ccparams[3].rotation_friction_coefficient = 0.3
+        stp.mcs_ccparams[3].upper_cop_x_margin = tmp_arm_front_margin
+        stp.mcs_ccparams[3].lower_cop_x_margin = tmp_arm_rear_margin
+        stp.mcs_ccparams[3].upper_cop_y_margin = tmp_arm_outside_margin
+        stp.mcs_ccparams[3].lower_cop_y_margin = tmp_arm_inside_margin
+        stp.mcs_ccparams[3].contact_decision_threshold = 10
         self.st_svc.setParameter(stp)
         # GG parameters
         gg=self.abc_svc.getGaitGeneratorParam()[1]
