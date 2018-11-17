@@ -133,7 +133,11 @@ sensors:
     translate: '0.13 0.0 0.21'
     rotate: '0.92269 -0.000735 0.385543 179.965'
     sensor_type: 'camera'
-
+  - sensor_name: zed_frame
+    parent_link: CHEST_LINK1
+    translate: '-0.13 0.0 0.21'
+    rotate: '0.0 0.0 1.0 180'
+    sensor_type: 'camera'
 
 ##
 ## reset-pose
