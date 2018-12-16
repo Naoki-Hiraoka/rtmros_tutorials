@@ -47,6 +47,17 @@
             (send robot :torso :waist-y)
             (send robot :torso :waist-p)
             :margin margin))
+
+  (when t
+    (dolist (limb '(:rleg :lleg))
+      (if (and (send robot limb :ankle-p) (send robot limb :ankle-r))
+	  (send robot :make-joint-min-max-table
+		(send robot limb :ankle-p :parent-link)
+		(send robot limb :ankle-r :child-link)
+		(send robot limb :ankle-p)
+		(send robot limb :ankle-r)
+		:margin margin)))
+    )
   ;; Hand made ankle-r ankle-p min-max table measured by real robot encoder values.
   ;;  This is for kawasaki-san ankle spacer.
   (when nil
