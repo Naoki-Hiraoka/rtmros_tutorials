@@ -151,15 +151,18 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_swing_pos_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         # for MCS
-        stp.mcs_k1 = -445.08
-        stp.mcs_k2 = -266.15
-        stp.mcs_k3 = 0.17242
-        stp.mcs_ee_forcemoment_distribution_weight = [[1.0,1.0,1.0,0.01,0.01,0.01],[1.0,1.0,1.0,0.01,0.01,0.01],[0.1,0.1,0.1,0.001,0.001,0.001],[0.1,0.1,0.1,0.001,0.001,0.001]]
-        stp.mcs_rot_damping_gain = [[35,35,100000]] * 4
+        stp.mcs_k1 = -7.67639696
+        stp.mcs_k2 = -4.58959131
+        stp.mcs_k3 = 0.0
+        stp.mcs_ee_forcemoment_distribution_weight = [[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10]]
+        #stp.mcs_joint_torque_distribution_weight =
+        stp.mcs_equality_weight = [100,100,100,100,100,100]
+        stp.mcs_rot_damping_gain = [[35,35,35]] * 4
         stp.mcs_rot_time_const = [[1.5,1.5,1.5]] * 4
-        stp.mcs_pos_damping_gain = [[3500*50,3500*50,9240]] * 4
+        stp.mcs_pos_damping_gain = [[3500,3500,3500]] * 4
         stp.mcs_pos_time_const = [[1.5,1.5,1.5]] * 4
         stp.mcs_contacteeforiginweight = [1.0,1.0,0.001,0.001]
+        stp.mcs_ik_optional_weight_vector = [1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0] + [0.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0]
         stp.mcs_ccparams[0].friction_coefficient = 0.3
         stp.mcs_ccparams[0].rotation_friction_coefficient = 0.3
         stp.mcs_ccparams[0].upper_cop_x_margin = tmp_leg_front_margin
