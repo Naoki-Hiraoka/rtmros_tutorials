@@ -151,8 +151,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_swing_pos_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         # for MCS
-        stp.mcs_k1 = -7.67639696
-        stp.mcs_k2 = -4.58959131
+        stp.mcs_k1 = 0.2
+        stp.mcs_k2 = 0.0
         stp.mcs_k3 = 0.0
         stp.mcs_ee_forcemoment_distribution_weight = [[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10]]
         #stp.mcs_joint_torque_distribution_weight =
