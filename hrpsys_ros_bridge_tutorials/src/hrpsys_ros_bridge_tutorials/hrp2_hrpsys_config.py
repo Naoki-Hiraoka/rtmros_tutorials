@@ -155,7 +155,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_k2 = 0.0
         stp.mcs_k3 = 0.0
         stp.mcs_ee_forcemoment_distribution_weight = [[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10],[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10]]
-        #stp.mcs_joint_torque_distribution_weight =
+        stp.mcs_joint_torque_distribution_weight = [0.006569, 0.001059, 0.000639, 0.000518, 0.001883, 0.0061, 0.042297, 0.006569, 0.001059, 0.000639, 0.000518, 0.001883, 0.0061, 0.042297, 0.001525, 0.000422, 0.06464, 0.027769, 0.001269, 0.002507, 0.020466, 0.003355, 0.03075, 0.027769, 0.043767, 0.06464, 0.001269, 0.002507, 0.020466, 0.003355, 0.03075, 0.027769, 0.043767, 0.06464]
         stp.mcs_equality_weight = [100,100,100,100,100,100]
         stp.mcs_rot_damping_gain = [[35,35,35]] * 4
         stp.mcs_rot_time_const = [[1.5,1.5,1.5]] * 4
