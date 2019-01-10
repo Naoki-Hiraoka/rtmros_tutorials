@@ -154,12 +154,12 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_k1 = 0.2
         stp.mcs_k2 = 0.0
         stp.mcs_k3 = 0.0
-        stp.mcs_contact_vel = 0.02
+        stp.mcs_contact_vel = 0.01
         stp.mcs_joint_torque_distribution_weight = [0.006569, 0.001059, 0.000639, 0.000518, 0.001883, 0.0061, 0.042297, 0.006569, 0.001059, 0.000639, 0.000518, 0.001883, 0.0061, 0.042297, 0.001525, 0.000422, 0.06464, 0.027769, 0.001269, 0.002507, 0.020466, 0.003355, 0.03075, 0.027769, 0.043767, 0.06464, 0.001269, 0.002507, 0.020466, 0.003355, 0.03075, 0.027769, 0.043767, 0.06464]
         stp.mcs_equality_weight = [100,100,100,100,100,100]
-        stp.mcs_rot_damping_gain = [[35,35,35*50]] * 4
+        stp.mcs_rot_damping_gain = [[100,100,35*10]] * 4
         stp.mcs_rot_time_const = [[15,15,15]] * 4
-        stp.mcs_pos_damping_gain = [[3500*50,3500*50,3500]] * 4
+        stp.mcs_pos_damping_gain = [[9240,9240,9240]] * 4
         stp.mcs_pos_time_const = [[15,15,15]] * 4
         stp.mcs_contacteeforiginweight = [1.0,1.0,0.001,0.001]
         stp.mcs_ik_optional_weight_vector = [1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0] + [0.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0]
@@ -169,7 +169,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_ceeparams[0].lower_cop_x_margin = -tmp_leg_rear_margin
         stp.mcs_ceeparams[0].upper_cop_y_margin = tmp_leg_inside_margin
         stp.mcs_ceeparams[0].lower_cop_y_margin = -tmp_leg_outside_margin
-        stp.mcs_ceeparams[0].min_fz = 15.0
+        stp.mcs_ceeparams[0].min_fz = 0.0
         stp.mcs_ceeparams[0].ee_forcemoment_distribution_weight=[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10]
         stp.mcs_ceeparams[1].friction_coefficient = 0.3
         stp.mcs_ceeparams[1].rotation_friction_coefficient = 0.3
@@ -177,7 +177,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_ceeparams[1].lower_cop_x_margin = -0.078
         stp.mcs_ceeparams[1].upper_cop_y_margin = 0.060
         stp.mcs_ceeparams[1].lower_cop_y_margin = -0.060
-        stp.mcs_ceeparams[1].min_fz = 15.0
+        stp.mcs_ceeparams[1].min_fz = 20.0
         stp.mcs_ceeparams[1].ee_forcemoment_distribution_weight=[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10]
         stp.mcs_ceeparams[2].friction_coefficient = 0.3
         stp.mcs_ceeparams[2].rotation_friction_coefficient = 0.3
@@ -185,7 +185,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_ceeparams[2].lower_cop_x_margin = -tmp_leg_rear_margin
         stp.mcs_ceeparams[2].upper_cop_y_margin = tmp_leg_outside_margin
         stp.mcs_ceeparams[2].lower_cop_y_margin = -tmp_leg_inside_margin
-        stp.mcs_ceeparams[2].min_fz = 15.0
+        stp.mcs_ceeparams[2].min_fz = 0.0
         stp.mcs_ceeparams[2].ee_forcemoment_distribution_weight=[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10]
         stp.mcs_ceeparams[3].friction_coefficient = 0.3
         stp.mcs_ceeparams[3].rotation_friction_coefficient = 0.3
@@ -193,7 +193,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_ceeparams[3].lower_cop_x_margin = -0.078
         stp.mcs_ceeparams[3].upper_cop_y_margin = 0.060
         stp.mcs_ceeparams[3].lower_cop_y_margin = -0.060
-        stp.mcs_ceeparams[3].min_fz = 15.0
+        stp.mcs_ceeparams[3].min_fz = 20.0
         stp.mcs_ceeparams[3].ee_forcemoment_distribution_weight=[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10]
         stp.mcs_ceeparams[4].friction_coefficient = 0.3
         stp.mcs_ceeparams[4].rotation_friction_coefficient = 0.3
@@ -211,10 +211,10 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_ceeparams[5].lower_cop_y_margin = -tmp_arm_inside_margin
         stp.mcs_ceeparams[5].min_fz = 15.0
         stp.mcs_ceeparams[5].ee_forcemoment_distribution_weight=[1e-10,1e-10,1e-10,1e-4,1e-4,1e-10]
-        stp.mcs_eeparams[0].contact_decision_threshold = 25
-        stp.mcs_eeparams[1].contact_decision_threshold = 25
-        stp.mcs_eeparams[2].contact_decision_threshold = 10
-        stp.mcs_eeparams[3].contact_decision_threshold = 10
+        stp.mcs_eeparams[0].contact_decision_threshold = 10
+        stp.mcs_eeparams[1].contact_decision_threshold = 10
+        stp.mcs_eeparams[2].contact_decision_threshold = 5
+        stp.mcs_eeparams[3].contact_decision_threshold = 5
         stp.mcs_impedance_params[0].force_gain = [0,0,0]
         stp.mcs_impedance_params[0].moment_gain = [0,0,0]
         stp.mcs_impedance_params[0].M_p = 0
