@@ -159,7 +159,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_equality_weight = [100,100,100,100,100,100]
         stp.mcs_rot_damping_gain = [[35,35,35*10]] * 4
         stp.mcs_rot_time_const = [[15,15,15]] * 4
-        stp.mcs_pos_damping_gain = [[3500,3500,3500]] * 4
+        stp.mcs_pos_damping_gain = [[3500,3500,9240]] * 4
         stp.mcs_pos_time_const = [[15,15,15]] * 4
         stp.mcs_contacteeforiginweight = [1.0,1.0,0.001,0.001]
         stp.mcs_ik_optional_weight_vector = [1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0] + [0.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0] + [1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0]
