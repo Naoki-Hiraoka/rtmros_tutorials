@@ -151,6 +151,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_swing_pos_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         # for MCS
+        stp.mcs_leq_joint = [False, False, False, False, False, False, True] + [False, False, False, False, False, False, True] + [False, False] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
+        stp.mcs_geq_joint = [False, False, False, False, False, False, False] + [False, False, False, False, False, False, False] + [False, False] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
         stp.mcs_k1 = 0.2
         stp.mcs_k2 = 0.0
         stp.mcs_k3 = 0.0
