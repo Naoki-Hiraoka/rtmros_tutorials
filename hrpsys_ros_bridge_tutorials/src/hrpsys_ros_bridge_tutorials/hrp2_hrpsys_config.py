@@ -164,7 +164,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_sync2activetime = 5.0
         stp.mcs_sync2referencetime = 5.0
         stp.reference_time_const = 1.5
-        stp.centroid_weight = [1e-4, 1e-4, 1e-6]
+        stp.centroid_weight = [1, 1, 1e-4]
         stp.reference_weight = 1e-6
         stp.mcs_joint_torque_distribution_weight = [0.006569, 0.001059, 0.000639, 0.000518, 0.001883, 0.0061, 0.042297, 0.006569, 0.001059, 0.000639, 0.000518, 0.001883, 0.0061, 0.042297, 0.001525, 0.000422, 0.06464, 0.027769, 0.001269, 0.002507, 0.020466, 0.003355, 0.03075, 0.027769, 0.043767, 0.06464, 0.001269, 0.002507, 0.020466, 0.003355, 0.03075, 0.027769, 0.043767, 0.06464]
         stp.mcs_equality_weight = [100,100,100,100,100,100]
@@ -191,8 +191,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].rot_compensation_limit = 0.349066
         stp.mcs_eeparams[0].z_contact_vel = 0.01
         stp.mcs_eeparams[0].rot_contact_vel = 0.05
-        stp.mcs_eeparams[0].z_contact_weight = 1e-4
-        stp.mcs_eeparams[0].rot_contact_weight = 1e-4
+        stp.mcs_eeparams[0].z_contact_weight = 1
+        stp.mcs_eeparams[0].rot_contact_weight = 1
         stp.mcs_eeparams[0].M_p = 0
         stp.mcs_eeparams[0].D_p = 174533
         stp.mcs_eeparams[0].K_p = 116667
@@ -201,8 +201,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].K_r = 66667
         stp.mcs_eeparams[0].force_gain = [0,0,0]
         stp.mcs_eeparams[0].moment_gain = [0,0,0]
-        stp.mcs_eeparams[0].pos_interact_weight = 1e-6
-        stp.mcs_eeparams[0].rot_interact_weight = 1e-6
+        stp.mcs_eeparams[0].pos_interact_weight = 1e-2
+        stp.mcs_eeparams[0].rot_interact_weight = 1e-2
         stp.mcs_eeparams[1].friction_coefficient = 0.3
         stp.mcs_eeparams[1].rotation_friction_coefficient = 0.01
         stp.mcs_eeparams[1].upper_cop_x_margin = 0.069
@@ -225,8 +225,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].rot_compensation_limit = 0.349066
         stp.mcs_eeparams[1].z_contact_vel = 0.01
         stp.mcs_eeparams[1].rot_contact_vel = 0.05
-        stp.mcs_eeparams[1].z_contact_weight = 1e-4
-        stp.mcs_eeparams[1].rot_contact_weight = 1e-4
+        stp.mcs_eeparams[1].z_contact_weight = 1
+        stp.mcs_eeparams[1].rot_contact_weight = 1
         stp.mcs_eeparams[1].M_p = 0
         stp.mcs_eeparams[1].D_p = 174533
         stp.mcs_eeparams[1].K_p = 116667
@@ -235,8 +235,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].K_r = 66667
         stp.mcs_eeparams[1].force_gain = [0,0,0]
         stp.mcs_eeparams[1].moment_gain = [0,0,0]
-        stp.mcs_eeparams[1].pos_interact_weight = 1e-6
-        stp.mcs_eeparams[1].rot_interact_weight = 1e-6
+        stp.mcs_eeparams[1].pos_interact_weight = 1e-2
+        stp.mcs_eeparams[1].rot_interact_weight = 1e-2
         stp.mcs_eeparams[2].friction_coefficient = 0.1
         stp.mcs_eeparams[2].rotation_friction_coefficient = 0.001
         stp.mcs_eeparams[2].upper_cop_x_margin = tmp_arm_front_margin
@@ -259,8 +259,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].rot_compensation_limit = 0.349066
         stp.mcs_eeparams[2].z_contact_vel = 0.01
         stp.mcs_eeparams[2].rot_contact_vel = 0.05
-        stp.mcs_eeparams[2].z_contact_weight = 1e-4
-        stp.mcs_eeparams[2].rot_contact_weight = 1e-4
+        stp.mcs_eeparams[2].z_contact_weight = 1
+        stp.mcs_eeparams[2].rot_contact_weight = 1
         stp.mcs_eeparams[2].M_p = 10
         stp.mcs_eeparams[2].D_p = 200
         stp.mcs_eeparams[2].K_p = 400
@@ -269,8 +269,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].K_r = 200
         stp.mcs_eeparams[2].force_gain = [0,0,0]
         stp.mcs_eeparams[2].moment_gain = [0,0,0]
-        stp.mcs_eeparams[2].pos_interact_weight = 1e-6
-        stp.mcs_eeparams[2].rot_interact_weight = 1e-6
+        stp.mcs_eeparams[2].pos_interact_weight = 1e-2
+        stp.mcs_eeparams[2].rot_interact_weight = 1e-2
         stp.mcs_eeparams[3].friction_coefficient = 0.1
         stp.mcs_eeparams[3].rotation_friction_coefficient = 0.001
         stp.mcs_eeparams[3].upper_cop_x_margin = tmp_arm_front_margin
@@ -293,8 +293,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].rot_compensation_limit = 0.349066
         stp.mcs_eeparams[3].z_contact_vel = 0.01
         stp.mcs_eeparams[3].rot_contact_vel = 0.05
-        stp.mcs_eeparams[3].z_contact_weight = 1e-4
-        stp.mcs_eeparams[3].rot_contact_weight = 1e-4
+        stp.mcs_eeparams[3].z_contact_weight = 1
+        stp.mcs_eeparams[3].rot_contact_weight = 1
         stp.mcs_eeparams[3].M_p = 10
         stp.mcs_eeparams[3].D_p = 200
         stp.mcs_eeparams[3].K_p = 400
@@ -303,8 +303,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].K_r = 200
         stp.mcs_eeparams[3].force_gain = [0,0,0]
         stp.mcs_eeparams[3].moment_gain = [0,0,0]
-        stp.mcs_eeparams[3].pos_interact_weight = 1e-6
-        stp.mcs_eeparams[3].rot_interact_weight = 1e-6
+        stp.mcs_eeparams[3].pos_interact_weight = 1e-2
+        stp.mcs_eeparams[3].rot_interact_weight = 1e-2
         self.st_svc.setParameter(stp)
         self.st_svc.setReferenceJoint("RLEG_JOINT6")
         self.st_svc.setReferenceJoint("LLEG_JOINT6")
