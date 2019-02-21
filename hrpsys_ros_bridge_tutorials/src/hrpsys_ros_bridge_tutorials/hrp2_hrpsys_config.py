@@ -159,12 +159,13 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_acttauv_cutoff_freq = 50.0
         stp.mcs_cog_error_cutoff_freq = 50.0
         stp.mcs_cogpos_compensation_limit = 0.1
-        stp.mcs_cogpos_time_const = 1.5
+        stp.mcs_cogvel_compensation_limit = 0.005
+        stp.mcs_cogacc_compensation_limit = 1.0
         stp.mcs_mcs_passive_vel = 0.034907
         stp.mcs_sync2activetime = 5.0
         stp.mcs_sync2referencetime = 5.0
         stp.reference_time_const = 1.5
-        stp.centroid_weight = [1, 1, 1e-4]
+        stp.centroid_weight = [1, 1, 1e-3]
         stp.reference_weight = 1e-6
         stp.mcs_joint_torque_distribution_weight = [0.006569, 0.001059, 0.000639, 0.000518, 0.001883, 0.0061, 0.042297, 0.006569, 0.001059, 0.000639, 0.000518, 0.001883, 0.0061, 0.042297, 0.001525, 0.000422, 0.06464, 0.027769, 0.001269, 0.002507, 0.020466, 0.003355, 0.03075, 0.027769, 0.043767, 0.06464, 0.001269, 0.002507, 0.020466, 0.003355, 0.03075, 0.027769, 0.043767, 0.06464]
         stp.mcs_equality_weight = [100,100,100,100,100,100]
