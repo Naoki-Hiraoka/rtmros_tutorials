@@ -85,6 +85,16 @@ sensors:
     parent_link: RARM_LINK6
     translate: '0 0 -0.077'
     sensor_type: 'base_force6d'
+  - sensor_name: rkneesensor
+    parent_link: RLEG_LINK3
+    translate: '0.105 -0.055 -0.005'
+    rotate: '0.0 1.0 0.0 -1.5708'
+    sensor_type: 'base_force6d'
+  - sensor_name: lkneesensor
+    parent_link: LLEG_LINK3
+    translate: '0.105 0.055 -0.005'
+    rotate: '0.0 1.0 0.0 -1.5708'
+    sensor_type: 'base_force6d'
 #   - sensor_name: CARMINE
 #     parent_link: HEAD_LINK1
 #     translate: '0.093 0.017 0.131'
