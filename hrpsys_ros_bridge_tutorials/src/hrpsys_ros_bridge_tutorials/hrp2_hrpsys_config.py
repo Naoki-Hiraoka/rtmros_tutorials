@@ -204,6 +204,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].moment_gain = [0,0,0]
         stp.mcs_eeparams[0].pos_interact_weight = 1e3
         stp.mcs_eeparams[0].rot_interact_weight = 1e3
+        stp.mcs_eeparams[0].is_ik_enable = True
         stp.mcs_eeparams[1].friction_coefficient = 0.3
         stp.mcs_eeparams[1].rotation_friction_coefficient = 0.01
         stp.mcs_eeparams[1].upper_cop_x_margin = 0.069
@@ -238,6 +239,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].moment_gain = [0,0,0]
         stp.mcs_eeparams[1].pos_interact_weight = 1e3
         stp.mcs_eeparams[1].rot_interact_weight = 1e3
+        stp.mcs_eeparams[1].is_ik_enable = True
         stp.mcs_eeparams[2].friction_coefficient = 0.1
         stp.mcs_eeparams[2].rotation_friction_coefficient = 0.001
         stp.mcs_eeparams[2].upper_cop_x_margin = tmp_arm_front_margin
@@ -272,6 +274,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].moment_gain = [0,0,0]
         stp.mcs_eeparams[2].pos_interact_weight = 1e3
         stp.mcs_eeparams[2].rot_interact_weight = 1e3
+        stp.mcs_eeparams[2].is_ik_enable = True
         stp.mcs_eeparams[3].friction_coefficient = 0.1
         stp.mcs_eeparams[3].rotation_friction_coefficient = 0.001
         stp.mcs_eeparams[3].upper_cop_x_margin = tmp_arm_front_margin
@@ -306,6 +309,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].moment_gain = [0,0,0]
         stp.mcs_eeparams[3].pos_interact_weight = 1e3
         stp.mcs_eeparams[3].rot_interact_weight = 1e3
+        stp.mcs_eeparams[3].is_ik_enable = True
         self.st_svc.setParameter(stp)
         self.st_svc.setReferenceJoint("RLEG_JOINT6")
         self.st_svc.setReferenceJoint("LLEG_JOINT6")
