@@ -196,7 +196,7 @@ replace_xmls:
       tag: gazebo
       attribute_name: reference
       attribute_value: RLEG_LINK3
-    replaced_xml: '<gazebo reference="RLEG_LINK3">\n    <mu1>0.9</mu1>\n    <mu2>0.9</mu2>\n    <selfCollide>true</selfCollide>\n  </gazebo>'
+    replaced_xml: '<gazebo reference="RLEG_LINK3">\n    <kp>1400000.0</kp>\n    <kd>280.0</kd>\n    <mu1>1.5</mu1>\n    <mu2>1.5</mu2>\n    <fdir1>1 0 0</fdir1>\n    <maxVel>10.0</maxVel>\n    <minDepth>0.00</minDepth>\n    <selfCollide>true</selfCollide>\n  </gazebo>'
   - match_rule:
       tag: gazebo
       attribute_name: reference
@@ -231,7 +231,7 @@ replace_xmls:
       tag: gazebo
       attribute_name: reference
       attribute_value: LLEG_LINK3
-    replaced_xml: '<gazebo reference="LLEG_LINK3">\n    <mu1>0.9</mu1>\n    <mu2>0.9</mu2>\n    <selfCollide>true</selfCollide>\n  </gazebo>'
+    replaced_xml: '<gazebo reference="LLEG_LINK3">\n    <kp>1400000.0</kp>\n    <kd>280.0</kd>\n    <mu1>1.5</mu1>\n    <mu2>1.5</mu2>\n    <fdir1>1 0 0</fdir1>\n    <maxVel>10.0</maxVel>\n    <minDepth>0.00</minDepth>\n   <selfCollide>true</selfCollide>\n   </gazebo>'
   - match_rule:
       tag: gazebo
       attribute_name: reference
