@@ -184,7 +184,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].max_fz = 1200.0
         stp.mcs_eeparams[0].min_fz = 20.0
         stp.mcs_eeparams[0].contact_decision_threshold = 10.0
-        stp.mcs_eeparams[0].ee_forcemoment_distribution_weight=[1e-4,1e-4,1e-4,1e-4,1e-4,1e-4]
+        stp.mcs_eeparams[0].ee_forcemoment_distribution_weight=[1.0,1.0,1.0,1.0,1.0,1.0]
         stp.mcs_eeparams[0].rot_damping_gain = [100, 100, 350]
         stp.mcs_eeparams[0].rot_time_const = [15, 15, 15]
         stp.mcs_eeparams[0].pos_damping_gain = [20000, 20000, 20000]
@@ -220,7 +220,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].max_fz = 1200.0
         stp.mcs_eeparams[1].min_fz = 20.0
         stp.mcs_eeparams[1].contact_decision_threshold = 10.0
-        stp.mcs_eeparams[1].ee_forcemoment_distribution_weight=[1e-4,1e-4,1e-4,1e-4,1e-4,1e-4]
+        stp.mcs_eeparams[1].ee_forcemoment_distribution_weight=[1.0,1.0,1.0,1.0,1.0,1.0]
         stp.mcs_eeparams[1].rot_damping_gain = [100, 100, 350]
         stp.mcs_eeparams[1].rot_time_const = [15, 15, 15]
         stp.mcs_eeparams[1].pos_damping_gain = [20000, 20000, 20000]
@@ -256,7 +256,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].max_fz = 200.0
         stp.mcs_eeparams[2].min_fz = 10.0
         stp.mcs_eeparams[2].contact_decision_threshold = 5.0
-        stp.mcs_eeparams[2].ee_forcemoment_distribution_weight=[1e-4,1e-4,1e-4,1e-4,1e-4,1e-4]
+        stp.mcs_eeparams[2].ee_forcemoment_distribution_weight=[1.0,1.0,1.0,1.0,1.0,1.0]
         stp.mcs_eeparams[2].rot_damping_gain = [35, 35, 350]
         stp.mcs_eeparams[2].rot_time_const = [15, 15, 15]
         stp.mcs_eeparams[2].pos_damping_gain = [3500, 3500, 3500]
@@ -292,7 +292,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].max_fz = 200.0
         stp.mcs_eeparams[3].min_fz = 10.0
         stp.mcs_eeparams[3].contact_decision_threshold = 5.0
-        stp.mcs_eeparams[3].ee_forcemoment_distribution_weight=[1e-4,1e-4,1e-4,1e-4,1e-4,1e-4]
+        stp.mcs_eeparams[3].ee_forcemoment_distribution_weight=[1.0,1.0,1.0,1.0,1.0,1.0]
         stp.mcs_eeparams[3].rot_damping_gain = [35, 35, 350]
         stp.mcs_eeparams[3].rot_time_const = [15, 15, 15]
         stp.mcs_eeparams[3].pos_damping_gain = [3500, 3500,3500]
@@ -328,7 +328,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].max_fz = 1200.0
         stp.mcs_eeparams[4].min_fz = 15.0
         stp.mcs_eeparams[4].contact_decision_threshold = 10.0
-        stp.mcs_eeparams[4].ee_forcemoment_distribution_weight=[1e-4,1e-4,1e-4,1e-4,1e-4,1e-4]
+        stp.mcs_eeparams[4].ee_forcemoment_distribution_weight=[1.0,1.0,1.0,1.0,1.0,1.0]
         stp.mcs_eeparams[4].rot_damping_gain = [0, 0, 0]
         stp.mcs_eeparams[4].rot_time_const = [15, 15, 15]
         stp.mcs_eeparams[4].pos_damping_gain = [20000, 20000, 20000]
@@ -364,7 +364,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[5].max_fz = 1200.0
         stp.mcs_eeparams[5].min_fz = 15.0
         stp.mcs_eeparams[5].contact_decision_threshold = 10.0
-        stp.mcs_eeparams[5].ee_forcemoment_distribution_weight=[1e-4,1e-4,1e-4,1e-4,1e-4,1e-4]
+        stp.mcs_eeparams[5].ee_forcemoment_distribution_weight=[1.0,1.0,1.0,1.0,1.0,1.0]
         stp.mcs_eeparams[5].rot_damping_gain = [0, 0, 0]
         stp.mcs_eeparams[5].rot_time_const = [15, 15, 15]
         stp.mcs_eeparams[5].pos_damping_gain = [20000, 20000, 20000]
@@ -400,7 +400,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[6].max_fz = 1200.0
         stp.mcs_eeparams[6].min_fz = 20.0
         stp.mcs_eeparams[6].contact_decision_threshold = 10.0
-        stp.mcs_eeparams[6].ee_forcemoment_distribution_weight=[1e-4,1e-4,1e-4,1e-4,1e-4,1e-4]
+        stp.mcs_eeparams[6].ee_forcemoment_distribution_weight=[1.0,1.0,1.0,1.0,1.0,1.0]
         stp.mcs_eeparams[6].rot_damping_gain = [100, 100, 350]
         stp.mcs_eeparams[6].rot_time_const = [15, 15, 15]
         stp.mcs_eeparams[6].pos_damping_gain = [20000, 20000, 20000]
@@ -436,7 +436,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].max_fz = 1200.0
         stp.mcs_eeparams[7].min_fz = 20.0
         stp.mcs_eeparams[7].contact_decision_threshold = 10.0
-        stp.mcs_eeparams[7].ee_forcemoment_distribution_weight=[1e-4,1e-4,1e-4,1e-4,1e-4,1e-4]
+        stp.mcs_eeparams[7].ee_forcemoment_distribution_weight=[1.0,1.0,1.0,1.0,1.0,1.0]
         stp.mcs_eeparams[7].rot_damping_gain = [100, 100, 350]
         stp.mcs_eeparams[7].rot_time_const = [15, 15, 15]
         stp.mcs_eeparams[7].pos_damping_gain = [20000, 20000, 20000]
