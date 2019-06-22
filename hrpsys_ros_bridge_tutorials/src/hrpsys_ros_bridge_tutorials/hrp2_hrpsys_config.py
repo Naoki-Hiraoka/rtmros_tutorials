@@ -156,12 +156,12 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_swing_pos_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         # for MCS
-        stp.mcs_debug_ratio = 1
+        stp.mcs_debug_ratio = 0
         stp.mcs_acttauv_cutoff_freq = 250.0
         stp.mcs_acttauv_cutoff_freq = 50.0
         stp.mcs_coiltemp_cutoff_freq = 50.0
         stp.mcs_surfacetemp_cutoff_freq = 50.0
-        stp.is_joint_enable = [True, True, True, True, True, True, False] + [True, True, True, True, True, True, False] + [True, True] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
+        stp.is_joint_enable = [True, True, True, True, True, True, False] + [True, True, True, True, True, True, False] + [False, False] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
         stp.tau_weight = 1e0
         stp.tauvel_weight = 1e0
         stp.temp_safe_time = 100.0
@@ -450,8 +450,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].outside_upper_cop_y_margin = 0.063
         stp.mcs_eeparams[7].outside_lower_cop_y_margin = -0.063
         self.st_svc.setParameter(stp)
-        self.st_svc.setReferenceJoint("RLEG_JOINT6")
-        self.st_svc.setReferenceJoint("LLEG_JOINT6")
+        self.st_svc.setReferenceJoints(["CHEST_JOINT0","CHEST_JOINT1","HEAD_JOINT0","HEAD_JOINT1","LARM_JOINT0","LARM_JOINT1","LARM_JOINT2","LARM_JOINT3","LARM_JOINT4","LARM_JOINT5","LARM_JOINT6","LARM_JOINT7","RARM_JOINT0","RARM_JOINT1","RARM_JOINT2","RARM_JOINT3","RARM_JOINT4","RARM_JOINT5","RARM_JOINT6","RARM_JOINT7"])
+        self.st_svc.setReferenceJoints(["RLEG_JOINT6","LLEG_JOINT6"])
         # GG parameters
         gg=self.abc_svc.getGaitGeneratorParam()[1]
         gg.default_step_time=1.1
