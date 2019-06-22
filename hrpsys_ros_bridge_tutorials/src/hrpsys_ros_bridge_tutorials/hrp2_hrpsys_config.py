@@ -52,7 +52,12 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
 
     def hrp2InitPose (self):
         if self.ROBOT_NAME.find("HRP2JSKNT") != -1:
-            return [0]*len(self.hrp2ResetPose())
+            ret=[0]*len(self.hrp2ResetPose())
+            ret[3]=0.034906585
+            ret[10]=0.034906585
+            ret[21]=-0.034906585
+            ret[29]=-0.034906585
+            return ret
         elif self.ROBOT_NAME.find("HRP2JSK") != -1:
             ret=[0]*len(self.hrp2ResetPose())
             ret[31]=-0.261799
