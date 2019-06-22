@@ -156,6 +156,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_swing_pos_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         # for MCS
+        stp.mcs_debug_ratio = 1
         stp.mcs_acttauv_cutoff_freq = 250.0
         stp.mcs_acttauv_cutoff_freq = 50.0
         stp.mcs_coiltemp_cutoff_freq = 50.0
@@ -672,13 +673,16 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         self.es_svc.setEmergencyStopperParam(esp)
 
     def setResetPose(self):
-        self.seq_svc.setJointAngles(self.hrp2ResetPose(), 5.0)
+        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetPose()], [], [[0]*len(self.hrp2ResetPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
+        #self.seq_svc.setJointAngles(self.hrp2ResetPose(), 5.0)
 
     def setResetManipPose(self):
-        self.seq_svc.setJointAngles(self.hrp2ResetManipPose(), 5.0)
+        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetPose()], [], [[0]*len(self.hrp2ResetManipPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
+        #self.seq_svc.setJointAngles(self.hrp2ResetManipPose(), 5.0)
 
     def setInitPose(self):
-        self.seq_svc.setJointAngles(self.hrp2InitPose(), 5.0)
+        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetPose()], [], [[0]*len(self.hrp2InitPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
+        #self.seq_svc.setJointAngles(self.hrp2InitPose(), 5.0)
 
     def loadForceMomentOffsetFile (self):
         import rospkg
