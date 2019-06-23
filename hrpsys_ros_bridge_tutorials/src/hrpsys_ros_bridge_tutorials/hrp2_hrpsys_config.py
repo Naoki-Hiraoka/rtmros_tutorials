@@ -53,8 +53,12 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
     def hrp2InitPose (self):
         if self.ROBOT_NAME.find("HRP2JSKNT") != -1:
             ret=[0]*len(self.hrp2ResetPose())
+            ret[2]=-0.0174532925
             ret[3]=0.034906585
+            ret[4]=-0.0174532925
+            ret[9]=-0.0174532925
             ret[10]=0.034906585
+            ret[11]=-0.0174532925
             ret[21]=-0.034906585
             ret[29]=-0.034906585
             return ret
@@ -156,23 +160,23 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_swing_pos_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         # for MCS
-        stp.mcs_debug_ratio = 0
+        stp.mcs_debug_ratio = 50
         stp.mcs_acttauv_cutoff_freq = 250.0
         stp.mcs_acttauv_cutoff_freq = 50.0
         stp.mcs_coiltemp_cutoff_freq = 50.0
         stp.mcs_surfacetemp_cutoff_freq = 50.0
         stp.is_joint_enable = [True, True, True, True, True, True, False] + [True, True, True, True, True, True, False] + [False, False] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
         stp.tau_weight = 1e0
-        stp.tauvel_weight = 1e0
+        stp.tauvel_weight = 4e0
         stp.temp_safe_time = 100.0
-        stp.force_weight = 1e0
+        stp.force_weight = 4e0
         stp.forcevel_weight = 1e0
-        stp.intvel_weight = 1e0
+        stp.intvel_weight = 1e2
         stp.P_weight = 1e0
         stp.Pvel_weight = 1e0
         stp.L_weight = 1e0
         stp.Lvel_weight = 1e0
-        stp.reference_weight = 1e-3
+        stp.reference_weight = 1e0
         stp.mcs_mcs_passive_vel = 0.034907
         stp.mcs_sync2activetime = 5.0
         stp.mcs_sync2referencetime = 5.0
