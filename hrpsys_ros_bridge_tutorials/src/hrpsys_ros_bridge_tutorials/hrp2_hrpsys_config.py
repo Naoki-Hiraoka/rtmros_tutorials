@@ -194,6 +194,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].lower_cop_y_margin = -0.060
         stp.mcs_eeparams[0].max_fz = 1200.0
         stp.mcs_eeparams[0].min_fz = 20.0
+        stp.mcs_eeparams[0].target_max_fz = 1200.0
         stp.mcs_eeparams[0].pos_interact_weight = 1e5
         stp.mcs_eeparams[0].rot_interact_weight = 1e5
         stp.mcs_eeparams[0].M_p = 0
@@ -228,6 +229,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].lower_cop_y_margin = -0.060
         stp.mcs_eeparams[1].max_fz = 1200.0
         stp.mcs_eeparams[1].min_fz = 20.0
+        stp.mcs_eeparams[1].target_max_fz = 1200.0
         stp.mcs_eeparams[1].pos_interact_weight = 1e0
         stp.mcs_eeparams[1].rot_interact_weight = 1e0
         stp.mcs_eeparams[1].M_p = 0
@@ -262,6 +264,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].lower_cop_y_margin = -tmp_arm_outside_margin
         stp.mcs_eeparams[2].max_fz = 200.0
         stp.mcs_eeparams[2].min_fz = 10.0
+        stp.mcs_eeparams[2].target_max_fz = 200.0
         stp.mcs_eeparams[2].pos_interact_weight = 1e0
         stp.mcs_eeparams[2].rot_interact_weight = 1e0
         stp.mcs_eeparams[2].M_p = 10
@@ -296,6 +299,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].lower_cop_y_margin = -tmp_arm_inside_margin
         stp.mcs_eeparams[3].max_fz = 200.0
         stp.mcs_eeparams[3].min_fz = 10.0
+        stp.mcs_eeparams[3].target_max_fz = 200.0
         stp.mcs_eeparams[3].pos_interact_weight = 1e0
         stp.mcs_eeparams[3].rot_interact_weight = 1e0
         stp.mcs_eeparams[3].M_p = 10
@@ -330,6 +334,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].lower_cop_y_margin = 0
         stp.mcs_eeparams[4].max_fz = 1200.0
         stp.mcs_eeparams[4].min_fz = 15.0
+        stp.mcs_eeparams[4].target_max_fz = 1200.0
         stp.mcs_eeparams[4].pos_interact_weight = 1e0
         stp.mcs_eeparams[4].rot_interact_weight = 1e0
         stp.mcs_eeparams[4].M_p = 0
@@ -364,6 +369,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[5].lower_cop_y_margin = 0
         stp.mcs_eeparams[5].max_fz = 1200.0
         stp.mcs_eeparams[5].min_fz = 15.0
+        stp.mcs_eeparams[5].target_max_fz = 1200.0
         stp.mcs_eeparams[5].pos_interact_weight = 1e0
         stp.mcs_eeparams[5].rot_interact_weight = 1e0
         stp.mcs_eeparams[5].M_p = 0
@@ -398,6 +404,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[6].lower_cop_y_margin = -0.060
         stp.mcs_eeparams[6].max_fz = 1200.0
         stp.mcs_eeparams[6].min_fz = 20.0
+        stp.mcs_eeparams[6].target_max_fz = 1200.0
         stp.mcs_eeparams[6].pos_interact_weight = 1e5
         stp.mcs_eeparams[6].rot_interact_weight = 1e5
         stp.mcs_eeparams[6].M_p = 0
@@ -432,6 +439,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].lower_cop_y_margin = -0.060
         stp.mcs_eeparams[7].max_fz = 1200.0
         stp.mcs_eeparams[7].min_fz = 20.0
+        stp.mcs_eeparams[7].target_max_fz = 1200.0
         stp.mcs_eeparams[7].pos_interact_weight = 1e5
         stp.mcs_eeparams[7].rot_interact_weight = 1e5
         stp.mcs_eeparams[7].M_p = 0
