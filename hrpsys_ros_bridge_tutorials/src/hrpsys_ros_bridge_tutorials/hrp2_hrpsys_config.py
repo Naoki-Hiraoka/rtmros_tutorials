@@ -161,16 +161,16 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         # for MCS
         stp.mcs_debug_ratio = 50
-        stp.mcs_acttauv_cutoff_freq = 250.0
+        stp.mcs_qactv_cutoff_freq = 250.0
         stp.mcs_acttauv_cutoff_freq = 50.0
         stp.mcs_coiltemp_cutoff_freq = 50.0
         stp.mcs_surfacetemp_cutoff_freq = 50.0
         stp.is_joint_enable = [True, True, True, True, True, True, False] + [True, True, True, True, True, True, False] + [False, False] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
         stp.tau_weight = 1e0
-        stp.tauvel_weight = 4e0
+        stp.tauvel_weight = 1e1
         stp.temp_safe_time = 100.0
-        stp.force_weight = 4e0
-        stp.forcevel_weight = 1e0
+        stp.force_weight = 1e0
+        stp.forcevel_weight = 1e1
         stp.intvel_weight = 1e2
         stp.P_weight = 1e0
         stp.Pvel_weight = 1e0
