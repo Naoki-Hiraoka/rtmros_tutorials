@@ -166,7 +166,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_acttauv_cutoff_freq = 50.0
         stp.mcs_coiltemp_cutoff_freq = 50.0
         stp.mcs_surfacetemp_cutoff_freq = 50.0
-        stp.is_joint_enable = [True, True, True, True, True, True, False] + [True, True, True, True, True, True, False] + [False, False] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
+        #stp.is_joint_enable = [True, True, True, True, True, True, False] + [True, True, True, True, True, True, False] + [False, False] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
+        stp.is_joint_enable = [True, True, True, True, True, True, False] + [True, True, True, True, True, True, False] + [True, True] + [False, False] + [True, True, True, True, True, True, True, False] + [True, True, True, True, True, True, True, False]
         stp.tau_weight = 1e0
         stp.tauvel_weight = 1e1
         stp.temp_safe_time = 100.0
@@ -196,8 +197,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].max_fz = 1200.0
         stp.mcs_eeparams[0].min_fz = 20.0
         stp.mcs_eeparams[0].target_max_fz = 1200.0
-        stp.mcs_eeparams[0].pos_interact_weight = 1e5
-        stp.mcs_eeparams[0].rot_interact_weight = 1e5
+        stp.mcs_eeparams[0].pos_interact_weight = 1e0
+        stp.mcs_eeparams[0].rot_interact_weight = 1e0
         stp.mcs_eeparams[0].M_p = 0
         stp.mcs_eeparams[0].D_p = 174533
         stp.mcs_eeparams[0].K_p = 116667
@@ -206,8 +207,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].K_r = 66667
         stp.mcs_eeparams[0].force_gain = [0,0,0]
         stp.mcs_eeparams[0].moment_gain = [0,0,0]
-        stp.mcs_eeparams[0].pos_compensation_limit = 0.05
-        stp.mcs_eeparams[0].rot_compensation_limit = 0.349066
+        stp.mcs_eeparams[0].pos_compensation_limit = 0.2
+        stp.mcs_eeparams[0].rot_compensation_limit = 0.523599
         stp.mcs_eeparams[0].footorigin_weight = 1e0
         stp.mcs_eeparams[0].z_contact_weight = 1e0
         stp.mcs_eeparams[0].z_contact_vel = 0.01
@@ -241,8 +242,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].K_r = 66667
         stp.mcs_eeparams[1].force_gain = [0,0,0]
         stp.mcs_eeparams[1].moment_gain = [0,0,0]
-        stp.mcs_eeparams[1].pos_compensation_limit = 0.05
-        stp.mcs_eeparams[1].rot_compensation_limit = 0.349066
+        stp.mcs_eeparams[1].pos_compensation_limit = 0.2
+        stp.mcs_eeparams[1].rot_compensation_limit = 0.523599
         stp.mcs_eeparams[1].footorigin_weight = 1e0
         stp.mcs_eeparams[1].z_contact_weight = 1e0
         stp.mcs_eeparams[1].z_contact_vel = 0.01
@@ -252,7 +253,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].outside_lower_cop_x_margin = -0.098
         stp.mcs_eeparams[1].outside_upper_cop_y_margin = 0.063
         stp.mcs_eeparams[1].outside_lower_cop_y_margin = -0.063
-        stp.mcs_eeparams[2].is_ik_enable = False
+        stp.mcs_eeparams[2].is_ik_enable = True
         stp.mcs_eeparams[2].contact_decision_threshold = 5.0
         stp.mcs_eeparams[2].act_force_cutoff_freq = 50.0
         stp.mcs_eeparams[2].act_moment_cutoff_freq = 50.0
@@ -276,8 +277,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].K_r = 200
         stp.mcs_eeparams[2].force_gain = [0,0,0]
         stp.mcs_eeparams[2].moment_gain = [0,0,0]
-        stp.mcs_eeparams[2].pos_compensation_limit = 0.05
-        stp.mcs_eeparams[2].rot_compensation_limit = 0.349066
+        stp.mcs_eeparams[2].pos_compensation_limit = 0.2
+        stp.mcs_eeparams[2].rot_compensation_limit = 0.523599
         stp.mcs_eeparams[2].footorigin_weight = 1e0
         stp.mcs_eeparams[2].z_contact_weight = 1e0
         stp.mcs_eeparams[2].z_contact_vel = 0.01
@@ -287,7 +288,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].outside_lower_cop_x_margin = -tmp_arm_rear_margin - 0.001
         stp.mcs_eeparams[2].outside_upper_cop_y_margin = tmp_arm_inside_margin + 0.001
         stp.mcs_eeparams[2].outside_lower_cop_y_margin = -tmp_arm_outside_margin - 0.001
-        stp.mcs_eeparams[3].is_ik_enable = False
+        stp.mcs_eeparams[3].is_ik_enable = True
         stp.mcs_eeparams[3].contact_decision_threshold = 5.0
         stp.mcs_eeparams[3].act_force_cutoff_freq = 50.0
         stp.mcs_eeparams[3].act_moment_cutoff_freq = 50.0
@@ -311,8 +312,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].K_r = 200
         stp.mcs_eeparams[3].force_gain = [0,0,0]
         stp.mcs_eeparams[3].moment_gain = [0,0,0]
-        stp.mcs_eeparams[3].pos_compensation_limit = 0.05
-        stp.mcs_eeparams[3].rot_compensation_limit = 0.349066
+        stp.mcs_eeparams[3].pos_compensation_limit = 0.2
+        stp.mcs_eeparams[3].rot_compensation_limit = 0.523599
         stp.mcs_eeparams[3].footorigin_weight = 1e0
         stp.mcs_eeparams[3].z_contact_weight = 1e0
         stp.mcs_eeparams[3].z_contact_vel = 0.01
@@ -346,8 +347,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].K_r = 66667
         stp.mcs_eeparams[4].force_gain = [0,0,0]
         stp.mcs_eeparams[4].moment_gain = [0,0,0]
-        stp.mcs_eeparams[4].pos_compensation_limit = 0.05
-        stp.mcs_eeparams[4].rot_compensation_limit = 0.349066
+        stp.mcs_eeparams[4].pos_compensation_limit = 0.2
+        stp.mcs_eeparams[4].rot_compensation_limit = 0.523599
         stp.mcs_eeparams[4].footorigin_weight = 1e0
         stp.mcs_eeparams[4].z_contact_weight = 1e0
         stp.mcs_eeparams[4].z_contact_vel = 0.01
@@ -381,8 +382,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[5].K_r = 66667
         stp.mcs_eeparams[5].force_gain = [0,0,0]
         stp.mcs_eeparams[5].moment_gain = [0,0,0]
-        stp.mcs_eeparams[5].pos_compensation_limit = 0.05
-        stp.mcs_eeparams[5].rot_compensation_limit = 0.349066
+        stp.mcs_eeparams[5].pos_compensation_limit = 0.2
+        stp.mcs_eeparams[5].rot_compensation_limit = 0.523599
         stp.mcs_eeparams[5].footorigin_weight = 1e0
         stp.mcs_eeparams[5].z_contact_weight = 1e0
         stp.mcs_eeparams[5].z_contact_vel = 0.01
@@ -406,8 +407,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[6].max_fz = 1200.0
         stp.mcs_eeparams[6].min_fz = 20.0
         stp.mcs_eeparams[6].target_max_fz = 1200.0
-        stp.mcs_eeparams[6].pos_interact_weight = 1e5
-        stp.mcs_eeparams[6].rot_interact_weight = 1e5
+        stp.mcs_eeparams[6].pos_interact_weight = 1e0
+        stp.mcs_eeparams[6].rot_interact_weight = 1e0
         stp.mcs_eeparams[6].M_p = 0
         stp.mcs_eeparams[6].D_p = 174533
         stp.mcs_eeparams[6].K_p = 116667
@@ -416,8 +417,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[6].K_r = 66667
         stp.mcs_eeparams[6].force_gain = [0,0,0]
         stp.mcs_eeparams[6].moment_gain = [0,0,0]
-        stp.mcs_eeparams[6].pos_compensation_limit = 0.05
-        stp.mcs_eeparams[6].rot_compensation_limit = 0.349066
+        stp.mcs_eeparams[6].pos_compensation_limit = 0.2
+        stp.mcs_eeparams[6].rot_compensation_limit = 0.523599
         stp.mcs_eeparams[6].footorigin_weight = 1e0
         stp.mcs_eeparams[6].z_contact_weight = 1e0
         stp.mcs_eeparams[6].z_contact_vel = 0.01
@@ -441,8 +442,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].max_fz = 1200.0
         stp.mcs_eeparams[7].min_fz = 20.0
         stp.mcs_eeparams[7].target_max_fz = 1200.0
-        stp.mcs_eeparams[7].pos_interact_weight = 1e5
-        stp.mcs_eeparams[7].rot_interact_weight = 1e5
+        stp.mcs_eeparams[7].pos_interact_weight = 1e0
+        stp.mcs_eeparams[7].rot_interact_weight = 1e0
         stp.mcs_eeparams[7].M_p = 0
         stp.mcs_eeparams[7].D_p = 174533
         stp.mcs_eeparams[7].K_p = 116667
@@ -451,8 +452,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].K_r = 66667
         stp.mcs_eeparams[7].force_gain = [0,0,0]
         stp.mcs_eeparams[7].moment_gain = [0,0,0]
-        stp.mcs_eeparams[7].pos_compensation_limit = 0.05
-        stp.mcs_eeparams[7].rot_compensation_limit = 0.349066
+        stp.mcs_eeparams[7].pos_compensation_limit = 0.2
+        stp.mcs_eeparams[7].rot_compensation_limit = 0.523599
         stp.mcs_eeparams[7].footorigin_weight = 1e0
         stp.mcs_eeparams[7].z_contact_weight = 1e0
         stp.mcs_eeparams[7].z_contact_vel = 0.01
@@ -463,7 +464,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].outside_upper_cop_y_margin = 0.063
         stp.mcs_eeparams[7].outside_lower_cop_y_margin = -0.063
         self.st_svc.setParameter(stp)
-        self.st_svc.setReferenceJoints(["CHEST_JOINT0","CHEST_JOINT1","HEAD_JOINT0","HEAD_JOINT1","LARM_JOINT0","LARM_JOINT1","LARM_JOINT2","LARM_JOINT3","LARM_JOINT4","LARM_JOINT5","LARM_JOINT6","LARM_JOINT7","RARM_JOINT0","RARM_JOINT1","RARM_JOINT2","RARM_JOINT3","RARM_JOINT4","RARM_JOINT5","RARM_JOINT6","RARM_JOINT7"])
+        #self.st_svc.setReferenceJoints(["CHEST_JOINT0","CHEST_JOINT1","HEAD_JOINT0","HEAD_JOINT1","LARM_JOINT0","LARM_JOINT1","LARM_JOINT2","LARM_JOINT3","LARM_JOINT4","LARM_JOINT5","LARM_JOINT6","LARM_JOINT7","RARM_JOINT0","RARM_JOINT1","RARM_JOINT2","RARM_JOINT3","RARM_JOINT4","RARM_JOINT5","RARM_JOINT6","RARM_JOINT7"])
+        self.st_svc.setReferenceJoints(["HEAD_JOINT0","HEAD_JOINT1","LARM_JOINT7","RARM_JOINT7"])
         self.st_svc.setReferenceJoints(["RLEG_JOINT6","LLEG_JOINT6"])
         # GG parameters
         gg=self.abc_svc.getGaitGeneratorParam()[1]
@@ -690,11 +692,11 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         #self.seq_svc.setJointAngles(self.hrp2ResetPose(), 5.0)
 
     def setResetManipPose(self):
-        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetPose()], [], [[0]*len(self.hrp2ResetManipPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
+        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetManipPose()], [], [[0]*len(self.hrp2ResetManipPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
         #self.seq_svc.setJointAngles(self.hrp2ResetManipPose(), 5.0)
 
     def setInitPose(self):
-        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetPose()], [], [[0]*len(self.hrp2InitPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
+        self.seq_svc.setJointAnglesSequenceFull([self.hrp2InitPose()], [], [[0]*len(self.hrp2InitPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
         #self.seq_svc.setJointAngles(self.hrp2InitPose(), 5.0)
 
     def loadForceMomentOffsetFile (self):
