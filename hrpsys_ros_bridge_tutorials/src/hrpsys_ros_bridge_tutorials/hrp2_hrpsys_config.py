@@ -183,6 +183,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_sync2activetime = 5.0
         stp.mcs_sync2referencetime = 5.0
         stp.mcs_passive_torquedirection = [0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] + [0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0] + [0.0, 0.0] + [0.0, 0.0] + [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] + [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        stp.mcs_collisionthre = 0.005
         stp.mcs_eeparams[0].is_ik_enable = True
         stp.mcs_eeparams[0].contact_decision_threshold = 10.0
         stp.mcs_eeparams[0].act_force_cutoff_freq = 50.0
