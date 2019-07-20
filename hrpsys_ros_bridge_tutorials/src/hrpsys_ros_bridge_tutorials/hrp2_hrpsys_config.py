@@ -155,7 +155,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_geq_joint = [False, False, False, False, False, False, False] + [False, False, False, False, False, False, False] + [False, False] + [False, False] + [False, False, False, False, False, False, False, False] + [False, False, False, False, False, False, False, False]
         stp.mcs_k1 = 0.2
         stp.mcs_k2 = 0.0
-        stp.mcs_k3 = 0.0
+        stp.mcs_k3 = 1e2
         stp.mcs_acttauv_cutoff_freq = 50.0
         stp.mcs_cog_error_cutoff_freq = 50.0
         stp.mcs_cogpos_compensation_limit = 0.1
