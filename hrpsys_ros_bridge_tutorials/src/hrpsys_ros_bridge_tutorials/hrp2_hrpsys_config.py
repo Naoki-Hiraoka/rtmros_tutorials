@@ -182,10 +182,10 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.vel_weight = 1e-2
         stp.acc_weight = 1e-2
         stp.reference_weight = 1e-4
-        stp.etau_weight = 1e-2
+        stp.etau_weight = 1e0
         #stp.etauvel_weight = 1e10
         #stp.etau_time = 1
-        stp.eforce_weight = 1e-1
+        stp.eforce_weight = 1e0
         #stp.eforcevel_weight = 1e10
         #stp.eforce_time = 10
         stp.taumax_weight = 1e1
