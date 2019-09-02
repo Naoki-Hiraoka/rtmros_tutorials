@@ -192,7 +192,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         #stp.taumaxvel_weight = 1e5
         stp.tau_M = 10
         stp.tau_D = 500
-        stp.tau_K = 50
+        stp.tau_K = 100
         stp.mcs_mcs_passive_vel = 0.034907
         stp.mcs_sync2activetime = 5.0
         stp.mcs_sync2referencetime = 5.0
@@ -212,12 +212,12 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].max_fz = 1200.0
         stp.mcs_eeparams[0].min_fz = 20.0
         stp.mcs_eeparams[0].target_max_fz = 5.0
-        stp.mcs_eeparams[0].z_leave_weight = 1e1
+        stp.mcs_eeparams[0].z_leave_weight = 1e0
         stp.mcs_eeparams[0].z_leavevel_weight = 1e-3
         stp.mcs_eeparams[0].other_leave_weight = 1e-5
         stp.mcs_eeparams[0].wrench_M = 10
         stp.mcs_eeparams[0].wrench_D = 500
-        stp.mcs_eeparams[0].wrench_K = 50
+        stp.mcs_eeparams[0].wrench_K = 100
         stp.mcs_eeparams[0].pos_interact_weight = 1.0
         stp.mcs_eeparams[0].rot_interact_weight = 1.0
         stp.mcs_eeparams[0].M_p = 100
@@ -253,12 +253,12 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].max_fz = 1200.0
         stp.mcs_eeparams[1].min_fz = 20.0
         stp.mcs_eeparams[1].target_max_fz = 5.0
-        stp.mcs_eeparams[1].z_leave_weight = 1e1
+        stp.mcs_eeparams[1].z_leave_weight = 1e0
         stp.mcs_eeparams[1].z_leavevel_weight = 1e-3
         stp.mcs_eeparams[1].other_leave_weight = 1e-5
         stp.mcs_eeparams[1].wrench_M = 10
         stp.mcs_eeparams[1].wrench_D = 500
-        stp.mcs_eeparams[1].wrench_K = 50
+        stp.mcs_eeparams[1].wrench_K = 100
         stp.mcs_eeparams[1].pos_interact_weight = 1.0
         stp.mcs_eeparams[1].rot_interact_weight = 1.0
         stp.mcs_eeparams[1].M_p = 100
@@ -299,7 +299,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].other_leave_weight = 1e-5
         stp.mcs_eeparams[2].wrench_M = 10
         stp.mcs_eeparams[2].wrench_D = 500
-        stp.mcs_eeparams[2].wrench_K = 50
+        stp.mcs_eeparams[2].wrench_K = 100
         stp.mcs_eeparams[2].pos_interact_weight = 1.0
         stp.mcs_eeparams[2].rot_interact_weight = 1.0
         stp.mcs_eeparams[2].M_p = 10
@@ -340,7 +340,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].other_leave_weight = 1e-5
         stp.mcs_eeparams[3].wrench_M = 10
         stp.mcs_eeparams[3].wrench_D = 500
-        stp.mcs_eeparams[3].wrench_K = 50
+        stp.mcs_eeparams[3].wrench_K = 100
         stp.mcs_eeparams[3].pos_interact_weight = 1.0
         stp.mcs_eeparams[3].rot_interact_weight = 1.0
         stp.mcs_eeparams[3].M_p = 10
@@ -381,7 +381,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].other_leave_weight = 1e-5
         stp.mcs_eeparams[4].wrench_M = 10
         stp.mcs_eeparams[4].wrench_D = 500
-        stp.mcs_eeparams[4].wrench_K = 50
+        stp.mcs_eeparams[4].wrench_K = 100
         stp.mcs_eeparams[4].pos_interact_weight = 1.0
         stp.mcs_eeparams[4].rot_interact_weight = 1.0
         stp.mcs_eeparams[4].M_p = 100
@@ -422,7 +422,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[5].other_leave_weight = 1e-5
         stp.mcs_eeparams[5].wrench_M = 10
         stp.mcs_eeparams[5].wrench_D = 500
-        stp.mcs_eeparams[5].wrench_K = 50
+        stp.mcs_eeparams[5].wrench_K = 100
         stp.mcs_eeparams[5].pos_interact_weight = 1.0
         stp.mcs_eeparams[5].rot_interact_weight = 1.0
         stp.mcs_eeparams[5].M_p = 100
@@ -463,7 +463,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[6].other_leave_weight = 1e-5
         stp.mcs_eeparams[6].wrench_M = 10
         stp.mcs_eeparams[6].wrench_D = 500
-        stp.mcs_eeparams[6].wrench_K = 50
+        stp.mcs_eeparams[6].wrench_K = 100
         stp.mcs_eeparams[6].pos_interact_weight = 1.0
         stp.mcs_eeparams[6].rot_interact_weight = 1.0
         stp.mcs_eeparams[6].M_p = 100
@@ -504,7 +504,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].other_leave_weight = 1e-5
         stp.mcs_eeparams[7].wrench_M = 10
         stp.mcs_eeparams[7].wrench_D = 500
-        stp.mcs_eeparams[7].wrench_K = 50
+        stp.mcs_eeparams[7].wrench_K = 100
         stp.mcs_eeparams[7].pos_interact_weight = 1.0
         stp.mcs_eeparams[7].rot_interact_weight = 1.0
         stp.mcs_eeparams[7].M_p = 100
