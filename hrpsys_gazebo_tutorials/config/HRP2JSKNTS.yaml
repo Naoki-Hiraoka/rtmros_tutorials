@@ -4,7 +4,7 @@ hrpsys_gazebo_configuration:
   use_joint_effort: false
   use_pd_feedback: true
   use_servo_on: true
-  iob_rate: 250
+  iob_rate: 100
 ### loose synchronization default true
 # use_loose_synchronized: false
 ### synchronized hrpsys and gazebo
