@@ -189,7 +189,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         #stp.eforcevel_weight = 1e10
         #stp.eforce_time = 10
         stp.taumax_weight = 1e1
-        #stp.taumaxvel_weight = 1e5
+        stp.taumaxvel_weight = 1e7
         #stp.tau_M = 10
         #stp.tau_D = 500
         #stp.tau_K = 100
