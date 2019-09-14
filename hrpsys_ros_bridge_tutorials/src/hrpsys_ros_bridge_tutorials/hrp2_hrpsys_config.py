@@ -201,7 +201,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.k0 = 0.01
         stp.k1 = 5.0
         stp.k3 = 10.0
-        stp.vel_weight1 = 1e-2
+        stp.vel_weight1 = 1e-1
         stp.vel_weight2 = 1e-2
         stp.vel_weight3 = 1e-6
         stp.mcs_eeparams[0].is_ik_enable = True
