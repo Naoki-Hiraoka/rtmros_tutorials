@@ -203,7 +203,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.k3 = 10.0
         stp.vel_weight1 = 1e-1
         stp.vel_weight2 = 1e-2
-        stp.vel_weight3 = 1e-6
+        stp.vel_weight3 = 1e-3
+        stp.col_scale = 1e4
         stp.mcs_eeparams[0].is_ik_enable = True
         stp.mcs_eeparams[0].contact_decision_threshold = 10.0
         stp.mcs_eeparams[0].act_force_cutoff_freq = 1.0
