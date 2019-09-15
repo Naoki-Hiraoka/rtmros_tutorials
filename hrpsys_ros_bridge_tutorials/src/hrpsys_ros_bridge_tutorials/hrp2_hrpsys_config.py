@@ -179,7 +179,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         #stp.Pvel_weight = 1e-4
         #stp.L_weight = 1e-2
         #stp.Lvel_weight = 1e-4
-        stp.vel_weight = 1e-3
+        stp.vel_weight = 1e-1
         #stp.acc_weight = 1e-6
         #stp.reference_weight = 1e-8
         stp.etau_weight = 1e0
@@ -200,7 +200,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_collisionthre = 0.01
         stp.k0 = 0.1
         stp.k1 = 5.0
-        stp.k3 = 10.0
+        stp.k3 = 5.0
         stp.vel_weight1 = 1e-1
         stp.vel_weight2 = 1e-2
         stp.vel_weight3 = 1e-3
