@@ -183,10 +183,10 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         #stp.acc_weight = 1e-6
         #stp.reference_weight = 1e-8
         stp.etau_weight = 1e0
-        stp.etauvel_weight = 1e6
+        stp.etauvel_weight = 1e8
         #stp.etau_time = 1
         stp.eforce_weight = 1e0
-        stp.eforcevel_weight = 1e6
+        stp.eforcevel_weight = 1e8
         #stp.eforce_time = 10
         stp.taumax_weight = 1e1
         stp.taumaxvel_weight = 1e7
@@ -375,8 +375,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].outside_lower_cop_y_margin = -tmp_arm_inside_margin - 0.001
         stp.mcs_eeparams[4].is_ik_enable = False
         stp.mcs_eeparams[4].contact_decision_threshold = 10.0
-        stp.mcs_eeparams[4].act_force_cutoff_freq = 1.0
-        stp.mcs_eeparams[4].act_moment_cutoff_freq = 1.0
+        stp.mcs_eeparams[4].act_force_cutoff_freq = 100
+        stp.mcs_eeparams[4].act_moment_cutoff_freq = 100
         stp.mcs_eeparams[4].contact_type = OpenHRP.StabilizerService.POINT
         stp.mcs_eeparams[4].friction_coefficient = 0.2
         stp.mcs_eeparams[4].rotation_friction_coefficient = 0
@@ -395,7 +395,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].wrench_K = 100
         stp.mcs_eeparams[4].wrench_weight = [1e-4,1e-2,1e-2,1e-1,1e-1,1e-1]
         stp.mcs_eeparams[4].pos_interact_weight = 1.0
-        stp.mcs_eeparams[4].rot_interact_weight = 1.0
+        stp.mcs_eeparams[4].rot_interact_weight = 1e-2
         stp.mcs_eeparams[4].M_p = 100
         stp.mcs_eeparams[4].D_p = 2000
         stp.mcs_eeparams[4].K_p = 4000
@@ -417,8 +417,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].outside_lower_cop_y_margin = 0
         stp.mcs_eeparams[5].is_ik_enable = False
         stp.mcs_eeparams[5].contact_decision_threshold = 10.0
-        stp.mcs_eeparams[5].act_force_cutoff_freq = 1.0
-        stp.mcs_eeparams[5].act_moment_cutoff_freq = 1.0
+        stp.mcs_eeparams[5].act_force_cutoff_freq = 100
+        stp.mcs_eeparams[5].act_moment_cutoff_freq = 100
         stp.mcs_eeparams[5].contact_type = OpenHRP.StabilizerService.POINT
         stp.mcs_eeparams[5].friction_coefficient = 0.2
         stp.mcs_eeparams[5].rotation_friction_coefficient = 0
@@ -437,7 +437,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[5].wrench_K = 100
         stp.mcs_eeparams[5].wrench_weight = [1e-4,1e-2,1e-2,1e-1,1e-1,1e-1]
         stp.mcs_eeparams[5].pos_interact_weight = 1.0
-        stp.mcs_eeparams[5].rot_interact_weight = 1.0
+        stp.mcs_eeparams[5].rot_interact_weight = 1e-2
         stp.mcs_eeparams[5].M_p = 100
         stp.mcs_eeparams[5].D_p = 2000
         stp.mcs_eeparams[5].K_p = 4000
@@ -571,6 +571,16 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         esp.default_recover_time=10.0 # [s]
         esp.default_retrieve_time=1.0 # [s]
         self.es_svc.setEmergencyStopperParam(esp)
+
+        vsp=self.vs_svc.getParameter()
+        vsp.root_force_weight = 1e2
+        vsp.root_moment_weight = 1e2
+        vsp.joint_torque_weight = 1e0
+        vsp.wengit = 1e-6
+        vsp.q_cutoff_freq = 100
+        vsp.tau_cutoff_freq = 1.0
+        vsp.wrench_cutoff_freq = 1.0
+        vsp.out_cutoff_freq = 100
 
     def setStAbcParametershrp2016c (self):
         # ABC parameters
