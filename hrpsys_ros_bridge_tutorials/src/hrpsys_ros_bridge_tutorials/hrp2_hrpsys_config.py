@@ -161,7 +161,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.eefm_swing_rot_spring_gain = [[1]*3, [1]*3, [0]*3, [0]*3]
         # for MCS
         stp.mcs_debug_ratio = 0
-        stp.mcs_step = 1
+        stp.mcs_step = 3
         stp.mcs_qactv_cutoff_freq = 100.0
         stp.mcs_acttauv_cutoff_freq = 1.0
         stp.mcs_coiltemp_cutoff_freq = 1.0
