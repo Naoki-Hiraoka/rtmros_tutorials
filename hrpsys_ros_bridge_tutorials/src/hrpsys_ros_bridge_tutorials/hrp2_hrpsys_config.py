@@ -256,8 +256,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].act_force_cutoff_freq = 1.0
         stp.mcs_eeparams[2].act_moment_cutoff_freq = 1.0
         stp.mcs_eeparams[2].contact_type = OpenHRP.StabilizerService.SURFACE
-        stp.mcs_eeparams[2].friction_coefficient = 0.001
-        stp.mcs_eeparams[2].rotation_friction_coefficient = 0.00001
+        stp.mcs_eeparams[2].friction_coefficient = 0.1
+        stp.mcs_eeparams[2].rotation_friction_coefficient = 0.001
         stp.mcs_eeparams[2].upper_cop_x_margin = tmp_arm_front_margin
         stp.mcs_eeparams[2].lower_cop_x_margin = -tmp_arm_rear_margin
         stp.mcs_eeparams[2].upper_cop_y_margin = tmp_arm_inside_margin
@@ -285,8 +285,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].act_force_cutoff_freq = 1.0
         stp.mcs_eeparams[3].act_moment_cutoff_freq = 1.0
         stp.mcs_eeparams[3].contact_type = OpenHRP.StabilizerService.SURFACE
-        stp.mcs_eeparams[3].friction_coefficient = 0.001
-        stp.mcs_eeparams[3].rotation_friction_coefficient = 0.00001
+        stp.mcs_eeparams[3].friction_coefficient = 0.1
+        stp.mcs_eeparams[3].rotation_friction_coefficient = 0.001
         stp.mcs_eeparams[3].upper_cop_x_margin = tmp_arm_front_margin
         stp.mcs_eeparams[3].lower_cop_x_margin = -tmp_arm_rear_margin
         stp.mcs_eeparams[3].upper_cop_y_margin = tmp_arm_outside_margin
