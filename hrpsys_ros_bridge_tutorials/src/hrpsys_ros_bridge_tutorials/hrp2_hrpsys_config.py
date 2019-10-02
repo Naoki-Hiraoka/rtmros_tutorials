@@ -200,7 +200,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].contact_type = OpenHRP.StabilizerService.SURFACE
         stp.mcs_eeparams[0].friction_coefficient = 0.3
         stp.mcs_eeparams[0].rotation_friction_coefficient = 0.04
-        stp.mcs_eeparams[0].upper_cop_x_margin = 0.050
+        stp.mcs_eeparams[0].upper_cop_x_margin = 0.100
         stp.mcs_eeparams[0].lower_cop_x_margin = -0.090
         stp.mcs_eeparams[0].upper_cop_y_margin = 0.052
         stp.mcs_eeparams[0].lower_cop_y_margin = -0.052
@@ -229,7 +229,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].contact_type = OpenHRP.StabilizerService.SURFACE
         stp.mcs_eeparams[1].friction_coefficient = 0.3
         stp.mcs_eeparams[1].rotation_friction_coefficient = 0.04
-        stp.mcs_eeparams[1].upper_cop_x_margin = 0.050
+        stp.mcs_eeparams[1].upper_cop_x_margin = 0.100
         stp.mcs_eeparams[1].lower_cop_x_margin = -0.090
         stp.mcs_eeparams[1].upper_cop_y_margin = 0.052
         stp.mcs_eeparams[1].lower_cop_y_margin = -0.052
@@ -374,7 +374,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[6].contact_type = OpenHRP.StabilizerService.SURFACE
         stp.mcs_eeparams[6].friction_coefficient = 0.3
         stp.mcs_eeparams[6].rotation_friction_coefficient = 0.04
-        stp.mcs_eeparams[6].upper_cop_x_margin = 0.090
+        stp.mcs_eeparams[6].upper_cop_x_margin = 0.100
         stp.mcs_eeparams[6].lower_cop_x_margin = -0.090
         stp.mcs_eeparams[6].upper_cop_y_margin = 0.054
         stp.mcs_eeparams[6].lower_cop_y_margin = -0.054
@@ -403,7 +403,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].contact_type = OpenHRP.StabilizerService.SURFACE
         stp.mcs_eeparams[7].friction_coefficient = 0.3
         stp.mcs_eeparams[7].rotation_friction_coefficient = 0.04
-        stp.mcs_eeparams[7].upper_cop_x_margin = 0.090
+        stp.mcs_eeparams[7].upper_cop_x_margin = 0.100
         stp.mcs_eeparams[7].lower_cop_x_margin = -0.090
         stp.mcs_eeparams[7].upper_cop_y_margin = 0.054
         stp.mcs_eeparams[7].lower_cop_y_margin = -0.054
