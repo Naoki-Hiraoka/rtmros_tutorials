@@ -200,12 +200,12 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[0].contact_type = OpenHRP.StabilizerService.SURFACE
         stp.mcs_eeparams[0].friction_coefficient = 0.3
         stp.mcs_eeparams[0].rotation_friction_coefficient = 0.04
-        stp.mcs_eeparams[0].upper_cop_x_margin = 0.100
+        stp.mcs_eeparams[0].upper_cop_x_margin = 0.090
         stp.mcs_eeparams[0].lower_cop_x_margin = -0.090
         stp.mcs_eeparams[0].upper_cop_y_margin = 0.052
         stp.mcs_eeparams[0].lower_cop_y_margin = -0.052
         stp.mcs_eeparams[0].max_fz = 1200.0
-        stp.mcs_eeparams[0].min_fz = 20.0
+        stp.mcs_eeparams[0].min_fz = 25.0
         stp.mcs_eeparams[0].z_leave_weight = 1e-2
         stp.mcs_eeparams[0].other_leave_weight = 1e-8
         stp.mcs_eeparams[0].wrench_weight = [1e-6,1e-4,1e-4,1e-3,1e-3,1e-3]
@@ -229,12 +229,12 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[1].contact_type = OpenHRP.StabilizerService.SURFACE
         stp.mcs_eeparams[1].friction_coefficient = 0.3
         stp.mcs_eeparams[1].rotation_friction_coefficient = 0.04
-        stp.mcs_eeparams[1].upper_cop_x_margin = 0.100
+        stp.mcs_eeparams[1].upper_cop_x_margin = 0.090
         stp.mcs_eeparams[1].lower_cop_x_margin = -0.090
         stp.mcs_eeparams[1].upper_cop_y_margin = 0.052
         stp.mcs_eeparams[1].lower_cop_y_margin = -0.052
         stp.mcs_eeparams[1].max_fz = 1200.0
-        stp.mcs_eeparams[1].min_fz = 20.0
+        stp.mcs_eeparams[1].min_fz = 25.0
         stp.mcs_eeparams[1].z_leave_weight = 1e-2
         stp.mcs_eeparams[1].other_leave_weight = 1e-8
         stp.mcs_eeparams[1].pos_interact_weight = 1.0
@@ -263,7 +263,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[2].upper_cop_y_margin = tmp_arm_inside_margin
         stp.mcs_eeparams[2].lower_cop_y_margin = -tmp_arm_outside_margin
         stp.mcs_eeparams[2].max_fz = 200.0
-        stp.mcs_eeparams[2].min_fz = 10.0
+        stp.mcs_eeparams[2].min_fz = 15.0
         stp.mcs_eeparams[2].z_leave_weight = 1e-2
         stp.mcs_eeparams[2].other_leave_weight = 1e-8
         stp.mcs_eeparams[2].pos_interact_weight = 1.0
@@ -292,7 +292,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].upper_cop_y_margin = tmp_arm_outside_margin
         stp.mcs_eeparams[3].lower_cop_y_margin = -tmp_arm_inside_margin
         stp.mcs_eeparams[3].max_fz = 200.0
-        stp.mcs_eeparams[3].min_fz = 10.0
+        stp.mcs_eeparams[3].min_fz = 15.0
         stp.mcs_eeparams[3].z_leave_weight = 1e-2
         stp.mcs_eeparams[3].other_leave_weight = 1e-8
         stp.mcs_eeparams[3].wrench_weight = [1e-6,1e-4,1e-4,1e-3,1e-3,1e-3]
