@@ -426,6 +426,35 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[7].rot_compensation_limit = 0.174533
         stp.mcs_eeparams[7].footorigin_weight = 1e0
         stp.mcs_eeparams[7].z_contact_vel = 0.01
+        stp.mcs_eeparams[8].contact_decision_threshold = 30.0
+        stp.mcs_eeparams[8].act_force_cutoff_freq = 1
+        stp.mcs_eeparams[8].act_moment_cutoff_freq = 1
+        stp.mcs_eeparams[8].contact_type = OpenHRP.StabilizerService.SURFACE
+        stp.mcs_eeparams[8].friction_coefficient = 0.2
+        stp.mcs_eeparams[8].rotation_friction_coefficient = 0.002
+        stp.mcs_eeparams[8].upper_cop_x_margin = 0.030
+        stp.mcs_eeparams[8].lower_cop_x_margin = -0.030
+        stp.mcs_eeparams[8].upper_cop_y_margin = 0.015
+        stp.mcs_eeparams[8].lower_cop_y_margin = -0.015
+        stp.mcs_eeparams[8].max_fz = 1200.0
+        stp.mcs_eeparams[8].min_fz = 50.0
+        stp.mcs_eeparams[8].z_leave_weight = 1e-2
+        stp.mcs_eeparams[8].other_leave_weight = 1e-6
+        stp.mcs_eeparams[8].wrench_weight = [1e-6,1e-4,1e-4,1e-3,1e-3,1e-3]
+        stp.mcs_eeparams[8].pos_interact_weight = 1.0
+        stp.mcs_eeparams[8].rot_interact_weight = 1e-2
+        stp.mcs_eeparams[8].M_p = 100
+        stp.mcs_eeparams[8].D_p = 2000
+        stp.mcs_eeparams[8].K_p = 4000
+        stp.mcs_eeparams[8].M_r = 50
+        stp.mcs_eeparams[8].D_r = 1000
+        stp.mcs_eeparams[8].K_r = 2000
+        stp.mcs_eeparams[8].force_gain = [1,1,1]
+        stp.mcs_eeparams[8].moment_gain = [1,1,1]
+        stp.mcs_eeparams[8].pos_compensation_limit = 0.1
+        stp.mcs_eeparams[8].rot_compensation_limit = 0.174533
+        stp.mcs_eeparams[8].footorigin_weight = 1e0
+        stp.mcs_eeparams[8].z_contact_vel = 0.01
         self.st_svc.setParameter(stp)
         #self.st_svc.setReferenceJoints(["CHEST_JOINT0","CHEST_JOINT1","HEAD_JOINT0","HEAD_JOINT1","LARM_JOINT0","LARM_JOINT1","LARM_JOINT2","LARM_JOINT3","LARM_JOINT4","LARM_JOINT5","LARM_JOINT6","LARM_JOINT7","RARM_JOINT0","RARM_JOINT1","RARM_JOINT2","RARM_JOINT3","RARM_JOINT4","RARM_JOINT5","RARM_JOINT6","RARM_JOINT7"])
         self.st_svc.setReferenceJoints(["HEAD_JOINT0","HEAD_JOINT1","LARM_JOINT7","RARM_JOINT7"])
@@ -662,15 +691,15 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         self.es_svc.setEmergencyStopperParam(esp)
 
     def setResetPose(self):
-        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetPose()], [], [[0]*len(self.hrp2ResetPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
+        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetPose()], [], [[0]*len(self.hrp2ResetPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*9], [[1.0]*2 + [0]*7 + [0]*9], [5.0])
         #self.seq_svc.setJointAngles(self.hrp2ResetPose(), 5.0)
 
     def setResetManipPose(self):
-        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetManipPose()], [], [[0]*len(self.hrp2ResetManipPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
+        self.seq_svc.setJointAnglesSequenceFull([self.hrp2ResetManipPose()], [], [[0]*len(self.hrp2ResetManipPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*9], [[1.0]*2 + [0]*7 + [0]*9], [5.0])
         #self.seq_svc.setJointAngles(self.hrp2ResetManipPose(), 5.0)
 
     def setInitPose(self):
-        self.seq_svc.setJointAnglesSequenceFull([self.hrp2InitPose()], [], [[0]*len(self.hrp2InitPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*4], [[1.0]*2 + [0]*6 + [0]*8], [5.0])
+        self.seq_svc.setJointAnglesSequenceFull([self.hrp2InitPose()], [], [[0]*len(self.hrp2InitPose())], [[0]*3], [[0]*3], [[0]*3], [[0]*3], [[0]*6*9], [[1.0]*2 + [0]*7 + [0]*9], [5.0])
         #self.seq_svc.setJointAngles(self.hrp2InitPose(), 5.0)
 
     def loadForceMomentOffsetFile (self):
