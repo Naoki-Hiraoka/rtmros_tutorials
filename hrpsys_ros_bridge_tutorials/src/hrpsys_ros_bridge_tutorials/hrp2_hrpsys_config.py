@@ -310,7 +310,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[3].rot_compensation_limit = 0.174533
         stp.mcs_eeparams[3].footorigin_weight = 1e0
         stp.mcs_eeparams[3].z_contact_vel = 0.01
-        stp.mcs_eeparams[4].contact_decision_threshold = 20.0
+        stp.mcs_eeparams[4].contact_decision_threshold = 30.0
         stp.mcs_eeparams[4].act_force_cutoff_freq = 1
         stp.mcs_eeparams[4].act_moment_cutoff_freq = 1
         stp.mcs_eeparams[4].contact_type = OpenHRP.StabilizerService.SURFACE
@@ -321,7 +321,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].upper_cop_y_margin = 0.020
         stp.mcs_eeparams[4].lower_cop_y_margin = -0.020
         stp.mcs_eeparams[4].max_fz = 1200.0
-        stp.mcs_eeparams[4].min_fz = 25.0
+        stp.mcs_eeparams[4].min_fz = 50.0
         stp.mcs_eeparams[4].z_leave_weight = 1e-2
         stp.mcs_eeparams[4].other_leave_weight = 1e-6
         stp.mcs_eeparams[4].wrench_weight = [1e-6,1e-4,1e-4,1e-3,1e-3,1e-3]
@@ -339,7 +339,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].rot_compensation_limit = 0.174533
         stp.mcs_eeparams[4].footorigin_weight = 1e0
         stp.mcs_eeparams[4].z_contact_vel = 0.01
-        stp.mcs_eeparams[5].contact_decision_threshold = 20.0
+        stp.mcs_eeparams[5].contact_decision_threshold = 30.0
         stp.mcs_eeparams[5].act_force_cutoff_freq = 1
         stp.mcs_eeparams[5].act_moment_cutoff_freq = 1
         stp.mcs_eeparams[5].contact_type = OpenHRP.StabilizerService.SURFACE
@@ -350,7 +350,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[5].upper_cop_y_margin = 0.020
         stp.mcs_eeparams[5].lower_cop_y_margin = -0.020
         stp.mcs_eeparams[5].max_fz = 1200.0
-        stp.mcs_eeparams[5].min_fz = 25.0
+        stp.mcs_eeparams[5].min_fz = 50.0
         stp.mcs_eeparams[5].z_leave_weight = 1e-2
         stp.mcs_eeparams[5].other_leave_weight = 1e-6
         stp.mcs_eeparams[5].wrench_weight = [1e-6,1e-4,1e-4,1e-3,1e-3,1e-3]
