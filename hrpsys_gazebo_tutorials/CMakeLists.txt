@@ -51,5 +51,8 @@ execute_process(COMMAND "${PROJECT_SOURCE_DIR}/scripts/replace_xmls.py" "${jsk_h
 execute_process(COMMAND "${PROJECT_SOURCE_DIR}/scripts/replace_xmls.py" "${jsk_hrp2_ros_bridge_PACKAGE_PATH}/launch/hrp2017_auditor.launch" -C "${PROJECT_SOURCE_DIR}/config/hrp2017_auditor_gazebo.yaml"
   OUTPUT_FILE ${PROJECT_SOURCE_DIR}/launch/hrp2017_auditor_gazebo.launch)
 
+execute_process(COMMAND "${PROJECT_SOURCE_DIR}/scripts/replace_xmls.py" "${jsk_hrp2_ros_bridge_PACKAGE_PATH}/launch/remotestabilizer.launch" -C "${PROJECT_SOURCE_DIR}/config/remotestabilizer_gazebo.yaml"
+  OUTPUT_FILE ${PROJECT_SOURCE_DIR}/launch/remotestabilizer_gazebo.launch)
+
 execute_process(COMMAND "${xacro_PREFIX}/lib/xacro/xacro" "${PROJECT_SOURCE_DIR}/robot_models/HRP2JSKNTS/HRP2JSKNTS.urdf.xacro"
   OUTPUT_FILE ${PROJECT_SOURCE_DIR}/robot_models/HRP2JSKNTS/HRP2JSKNTS.urdf)

@@ -1,0 +1,15 @@
+replace_xmls:
+  - match_rule:
+      tag: arg
+      attribute:
+        - name: name
+          value: nameserver
+    replaced_attribute_name: default
+    replaced_attribute_value: localhost
+  - match_rule:
+      tag: arg
+      attribute:
+        - name: name
+          value: CONF_FILE
+    replaced_attribute_name: default
+    replaced_attribute_value: '$(find hrpsys_gazebo_tutorials)/config/$(arg ROBOT_NAME).conf'
