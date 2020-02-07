@@ -195,6 +195,8 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.vel_weight2 = 1e-2
         stp.vel_weight3 = 1e-2
         stp.vel_limit = 0.1
+        stp.we1 = 1e-8
+        stp.we2 = 1e4
         stp.mcs_eeparams[0].contact_decision_threshold = 30.0
         stp.mcs_eeparams[0].act_force_cutoff_freq = 1.0
         stp.mcs_eeparams[0].act_moment_cutoff_freq = 1.0
