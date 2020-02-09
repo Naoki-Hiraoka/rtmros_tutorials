@@ -479,6 +479,10 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         vsp.wrench_cutoff_freq = 1.0
         vsp.out_cutoff_freq = 100
 
+        kfp=self.kf_svc.getKalmanFilterParam()[1]
+        kfp.kf_algorithm=OpenHRP.KalmanFilterService.QuaternionExtendedKalmanFilter
+        self.kf_svc.setKalmanFilterParam(kfp)
+
     def setStAbcParametershrp2016c (self):
         # ABC parameters
         abcp=self.abc_svc.getAutoBalancerParam()[1]
