@@ -334,7 +334,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[4].wrench_weight = [1e-6,1e-4,1e-4,1e-3,1e-3,1e-3]
         stp.mcs_eeparams[4].contact_weight = [1e0,2.5e1,2.5e1,2.5e3,1e4,1e4]
         stp.mcs_eeparams[4].pos_interact_weight = 1.0
-        stp.mcs_eeparams[4].rot_interact_weight = 1.0
+        stp.mcs_eeparams[4].rot_interact_weight = 1e-2
         stp.mcs_eeparams[4].M_p = 100
         stp.mcs_eeparams[4].D_p = 2000
         stp.mcs_eeparams[4].K_p = 4000
@@ -364,7 +364,7 @@ class JSKHRP2HrpsysConfigurator(HrpsysConfigurator):
         stp.mcs_eeparams[5].wrench_weight = [1e-6,1e-4,1e-4,1e-3,1e-3,1e-3]
         stp.mcs_eeparams[5].contact_weight = [1e0,2.5e1,2.5e1,2.5e3,1e4,1e4]
         stp.mcs_eeparams[5].pos_interact_weight = 1.0
-        stp.mcs_eeparams[5].rot_interact_weight = 1.0
+        stp.mcs_eeparams[5].rot_interact_weight = 1e-2
         stp.mcs_eeparams[5].M_p = 100
         stp.mcs_eeparams[5].D_p = 2000
         stp.mcs_eeparams[5].K_p = 4000
