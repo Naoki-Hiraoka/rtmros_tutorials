@@ -21,6 +21,8 @@ env:
     - ROS_DISTRO=indigo  USE_DEB=true
     - ROS_DISTRO=indigo  USE_DEB=false NOT_TEST_INSTALL=true
     - ROS_DISTRO=kinetic USE_DEB=false
+    # hrpsys and hrpsys_ros_bridge have not been released on melodic yet.
+    - ROS_DISTRO=melodic USE_DEB=false
 matrix:
   # allow_failures:
   #   - env: ROS_DISTRO=indigo  USE_DEB=false NOT_TEST_INSTALL=true
