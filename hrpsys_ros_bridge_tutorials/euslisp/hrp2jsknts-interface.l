@@ -12,9 +12,12 @@
     (prog1
         (send-super* :init :robot hrp2jsknts-robot args)
       ;; add controller
-      (dolist (limb '(:rarm :larm :rleg :lleg :head :torso :rhand :lhand))
+      (dolist (limb '(:rarm :larm :rleg :lleg :head :torso))
         (send self :def-limb-controller-method limb)
-        (send self :add-controller (read-from-string (format nil "~A-controller" limb)) :joint-enable-check t :create-actions t))))
+        (send self :add-controller (read-from-string (format nil "~A-controller" limb)) :joint-enable-check t :create-actions t))
+      (send self :add-controller :rhand-controller :joint-enable-check t :create-actions t)
+      (send self :add-controller :lhand-controller :joint-enable-check t :create-actions t)
+      ))
   )
 
 (defun hrp2jsknts-init (&rest args)
