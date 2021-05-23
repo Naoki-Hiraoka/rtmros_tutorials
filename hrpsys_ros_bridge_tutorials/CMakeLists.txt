@@ -277,6 +277,28 @@ if(EXISTS ${hrp2_models_MODEL_DIR}/HRP3HAND_R/HRP3HAND_Rmain.wrl)
     HRP3HAND_R)
 endif()
 
+# HIRONXJSK
+compile_openhrp_model_for_closed_robots(HIRONXJSK HIRONXJSK HIRONXJSK
+  --conf-dt-option "0.005"
+  --conf-file-option "# This conf should be backup of /opt/jsk/etc/HIRONX/hrprtc/Robot.conf inside HIRONXJSK"
+  --conf-file-option "# model should be /opt/jsk/etc/HIRONX/model/main.wrl inside HIRONXJSK"
+  --conf-file-option "pdgains.file_name: /opt/jsk/etc/HIRONX/hrprtc/PDgains.sav"
+  --conf-file-option "naming.formats: %n.rtc"
+  --conf-file-option "# RTC disable/enable settings which will be loaded via RobotHardware"
+  --conf-file-option "CollisionDetector.enable: YES"
+  --conf-file-option "# for HIRO hand servo"
+  --conf-file-option "servo.id: 2,3,4,5, 6,7,8,9"
+  --conf-file-option "servo.offset: -0.80,0.0,-0.85,0.0, -0.85,0.0,-0.89,0.0"
+  --conf-file-option "servo.devname: /dev/serusb1"
+  --conf-file-option "servo.dir 1,1,-1,-1,1,1,-1,-1"
+  --conf-file-option "# for RemoveForceSensorLinkOffset"
+  --conf-file-option "forcemoment_offset_params: /opt/jsk/etc/HIRONX/hrprtc/force_sensor_calib_20191127"
+  --conf-file-option "# for ImpedanceController"
+  --conf-file-option "end_effectors: rarm,RARM_JOINT5,CHEST_JOINT0,-0.05,0,0,0,1,0,1.5708, larm,LARM_JOINT5,CHEST_JOINT0,-0.05,0,0,0,1,0,1.5708,"
+  --conf-file-option "# for CollisionDetector"
+  --conf-file-option "collision_pair: HEAD_JOINT0:RARM_JOINT2 HEAD_JOINT0:RARM_JOINT3 HEAD_JOINT0:RARM_JOINT4 HEAD_JOINT0:RARM_JOINT5 HEAD_JOINT0:LARM_JOINT2 HEAD_JOINT0:LARM_JOINT3 HEAD_JOINT0:LARM_JOINT4 HEAD_JOINT0:LARM_JOINT5 HEAD_JOINT1:RARM_JOINT2 HEAD_JOINT1:RARM_JOINT3 HEAD_JOINT1:RARM_JOINT4 HEAD_JOINT1:RARM_JOINT5 HEAD_JOINT1:LARM_JOINT2 HEAD_JOINT1:LARM_JOINT3 HEAD_JOINT1:LARM_JOINT4 HEAD_JOINT1:LARM_JOINT5 WAIST:RARM_JOINT3 WAIST:RARM_JOINT4 WAIST:RARM_JOINT5 WAIST:LARM_JOINT3 WAIST:LARM_JOINT4 WAIST:LARM_JOINT5 CHEST_JOINT0:RARM_JOINT2 CHEST_JOINT0:RARM_JOINT3 CHEST_JOINT0:RARM_JOINT4 CHEST_JOINT0:RARM_JOINT5 CHEST_JOINT0:LARM_JOINT2 CHEST_JOINT0:LARM_JOINT3 CHEST_JOINT0:LARM_JOINT4 CHEST_JOINT0:LARM_JOINT5 RARM_JOINT0:LARM_JOINT1 RARM_JOINT0:LARM_JOINT2 RARM_JOINT0:LARM_JOINT3 RARM_JOINT0:LARM_JOINT4 RARM_JOINT0:LARM_JOINT5 RARM_JOINT1:LARM_JOINT0 RARM_JOINT1:LARM_JOINT1 RARM_JOINT1:LARM_JOINT2 RARM_JOINT1:LARM_JOINT3 RARM_JOINT1:LARM_JOINT4 RARM_JOINT1:LARM_JOINT5 RARM_JOINT2:LARM_JOINT0 RARM_JOINT2:LARM_JOINT1 RARM_JOINT2:LARM_JOINT2 RARM_JOINT2:LARM_JOINT3 RARM_JOINT2:LARM_JOINT4 RARM_JOINT2:LARM_JOINT5 RARM_JOINT3:LARM_JOINT0 RARM_JOINT3:LARM_JOINT1 RARM_JOINT3:LARM_JOINT2 RARM_JOINT3:LARM_JOINT3 RARM_JOINT3:LARM_JOINT4 RARM_JOINT3:LARM_JOINT5 RARM_JOINT4:LARM_JOINT0 RARM_JOINT4:LARM_JOINT1 RARM_JOINT4:LARM_JOINT2 RARM_JOINT4:LARM_JOINT3 RARM_JOINT4:LARM_JOINT4 RARM_JOINT4:LARM_JOINT5 RARM_JOINT5:LARM_JOINT0 RARM_JOINT5:LARM_JOINT1 RARM_JOINT5:LARM_JOINT2 RARM_JOINT5:LARM_JOINT3 RARM_JOINT5:LARM_JOINT4 RARM_JOINT5:LARM_JOINT5"
+  )
+
 # URATALEG
 compile_rbrain_model_for_closed_robots(URATALEG URATALEG URATALEG
   --robothardware-conf-file-option "pdgains.file_name: ${PROJECT_SOURCE_DIR}/models/PDgains.sav"
@@ -373,6 +395,30 @@ compile_rbrain_model_for_closed_robots(JAXON_RED JAXON_RED JAXON_RED
 gen_minmax_table_for_closed_robots(JAXON_RED JAXON_RED JAXON_RED)
 endif()
 
+# JAXON_BLUE
+compile_rbrain_model_for_closed_robots(JAXON_BLUE JAXON_BLUE JAXON_BLUE
+  --conf-dt-option "0.002"
+  --simulation-timestep-option "0.002"
+  --robothardware-conf-file-option "pdgains.file_name: ${PROJECT_SOURCE_DIR}/models/PDgains.sav"
+  --conf-file-option "pdgains.file_name: ${PROJECT_SOURCE_DIR}/models/JAXON_BLUE.PDgains.sav"
+  --conf-file-option "pdgains_sim_file_name: ${PROJECT_SOURCE_DIR}/models/JAXON_BLUE.PDgains_sim.dat"
+  --conf-file-option "abc_leg_offset: 0.0, 0.1, 0.0"
+  ## KAWADA foot
+  --conf-file-option "# end_effectors: rleg,RLEG_JOINT5,WAIST,0.0,0.0,-0.096,0.0,0.0,0.0,0.0, lleg,LLEG_JOINT5,WAIST,0.0,0.0,-0.096,0.0,0.0,0.0,0.0, rarm,RARM_JOINT6,CHEST_JOINT2,0.0,0.055,-0.217,0,1.0,0.0,1.5708, larm,LARM_JOINT6,CHEST_JOINT2,0.0,-0.055,-0.217,0,1.0,0.0,1.5708,"
+  ## KAWADA foot with rubber shoes
+  --conf-file-option "end_effectors: rleg,RLEG_JOINT5,WAIST,0.0,0.0,-0.1,0.0,0.0,0.0,0.0, lleg,LLEG_JOINT5,WAIST,0.0,0.0,-0.1,0.0,0.0,0.0,0.0, rarm,RARM_JOINT6,CHEST_JOINT2,0.0,0.0,-0.220,0.0,1.0,0.0,1.5708, larm,LARM_JOINT6,CHEST_JOINT2,0.0,0.0,-0.220,0.0,1.0,0.0,1.5708,"
+  ## KAWADA foot with rubber shoes + hand contact end-coords
+  --conf-file-option "# end_effectors: rleg,RLEG_JOINT5,WAIST,0.0,0.0,-0.1,0.0,0.0,0.0,0.0, lleg,LLEG_JOINT5,WAIST,0.0,0.0,-0.1,0.0,0.0,0.0,0.0, rarm,RARM_JOINT6,CHEST_JOINT2,0.0,0.0,-0.238,0.0,0.0,-1.0,1.5708, larm,LARM_JOINT6,CHEST_JOINT2,0.0,0.0,-0.238,0.0,0.0,1.0,1.5708,# KAWADA foot with rubber shoes + hand contact end-coords"
+  ## JSK foot : mechanical 103.5mm, sole rubber 2mm
+  --conf-file-option "# end_effectors: rleg,RLEG_JOINT5,WAIST,0.0,0.0,-0.1055,0.0,0.0,0.0,0.0, lleg,LLEG_JOINT5,WAIST,0.0,0.0,-0.1055,0.0,0.0,0.0,0.0, rarm,RARM_JOINT6,CHEST_JOINT2,0.0,0,-0.217,0,1.0,0.0,1.5708, larm,LARM_JOINT6,CHEST_JOINT2,0.0,0,-0.217,0,1.0,0.0,1.5708,"
+  --conf-file-option "collision_pair: RLEG_JOINT2:LLEG_JOINT2 RLEG_JOINT2:LLEG_JOINT3 RLEG_JOINT2:LLEG_JOINT5 RLEG_JOINT2:RARM_JOINT3 RLEG_JOINT2:RARM_JOINT4 RLEG_JOINT2:RARM_JOINT5 RLEG_JOINT2:RARM_JOINT6 RLEG_JOINT2:LARM_JOINT3 RLEG_JOINT2:LARM_JOINT4 RLEG_JOINT2:LARM_JOINT5 RLEG_JOINT2:LARM_JOINT6 RLEG_JOINT3:LLEG_JOINT2 RLEG_JOINT3:LLEG_JOINT3 RLEG_JOINT3:LLEG_JOINT5 RLEG_JOINT3:RARM_JOINT3 RLEG_JOINT3:RARM_JOINT4 RLEG_JOINT3:RARM_JOINT5 RLEG_JOINT3:RARM_JOINT6 RLEG_JOINT3:LARM_JOINT3 RLEG_JOINT3:LARM_JOINT4 RLEG_JOINT3:LARM_JOINT5 RLEG_JOINT3:LARM_JOINT6 RLEG_JOINT5:LLEG_JOINT2 RLEG_JOINT5:LLEG_JOINT3 RLEG_JOINT5:LLEG_JOINT5 RLEG_JOINT5:RARM_JOINT3 RLEG_JOINT5:RARM_JOINT4 RLEG_JOINT5:RARM_JOINT5 RLEG_JOINT5:RARM_JOINT6 RLEG_JOINT5:LARM_JOINT3 RLEG_JOINT5:LARM_JOINT4 RLEG_JOINT5:LARM_JOINT5 RLEG_JOINT5:LARM_JOINT6 LLEG_JOINT2:RARM_JOINT3 LLEG_JOINT2:RARM_JOINT4 LLEG_JOINT2:RARM_JOINT5 LLEG_JOINT2:RARM_JOINT6 LLEG_JOINT2:LARM_JOINT3 LLEG_JOINT2:LARM_JOINT4 LLEG_JOINT2:LARM_JOINT5 LLEG_JOINT2:LARM_JOINT6 LLEG_JOINT3:RARM_JOINT3 LLEG_JOINT3:RARM_JOINT4 LLEG_JOINT3:RARM_JOINT5 LLEG_JOINT3:RARM_JOINT6 LLEG_JOINT3:LARM_JOINT3 LLEG_JOINT3:LARM_JOINT4 LLEG_JOINT3:LARM_JOINT5 LLEG_JOINT3:LARM_JOINT6 LLEG_JOINT5:RARM_JOINT3 LLEG_JOINT5:RARM_JOINT4 LLEG_JOINT5:RARM_JOINT5 LLEG_JOINT5:RARM_JOINT6 LLEG_JOINT5:LARM_JOINT3 LLEG_JOINT5:LARM_JOINT4 LLEG_JOINT5:LARM_JOINT5 LLEG_JOINT5:LARM_JOINT6 CHEST_JOINT1:RARM_JOINT2 CHEST_JOINT1:RARM_JOINT3 CHEST_JOINT1:RARM_JOINT4 CHEST_JOINT1:RARM_JOINT5 CHEST_JOINT1:RARM_JOINT6 CHEST_JOINT1:LARM_JOINT2 CHEST_JOINT1:LARM_JOINT3 CHEST_JOINT1:LARM_JOINT4 CHEST_JOINT1:LARM_JOINT5 CHEST_JOINT1:LARM_JOINT6 HEAD_JOINT1:RARM_JOINT3 HEAD_JOINT1:RARM_JOINT4 HEAD_JOINT1:RARM_JOINT5 HEAD_JOINT1:RARM_JOINT6 HEAD_JOINT1:LARM_JOINT3 HEAD_JOINT1:LARM_JOINT4 HEAD_JOINT1:LARM_JOINT5 HEAD_JOINT1:LARM_JOINT6 RARM_JOINT0:LARM_JOINT4 RARM_JOINT0:LARM_JOINT5 RARM_JOINT0:LARM_JOINT6 RARM_JOINT2:LARM_JOINT4 RARM_JOINT2:LARM_JOINT5 RARM_JOINT2:LARM_JOINT6 RARM_JOINT2:WAIST RARM_JOINT3:LARM_JOINT3 RARM_JOINT3:LARM_JOINT4 RARM_JOINT3:LARM_JOINT5 RARM_JOINT3:LARM_JOINT6 RARM_JOINT3:WAIST RARM_JOINT4:LARM_JOINT0 RARM_JOINT4:LARM_JOINT2 RARM_JOINT4:LARM_JOINT3 RARM_JOINT4:LARM_JOINT4 RARM_JOINT4:LARM_JOINT5 RARM_JOINT4:LARM_JOINT6 RARM_JOINT4:WAIST RARM_JOINT5:LARM_JOINT0 RARM_JOINT5:LARM_JOINT2 RARM_JOINT5:LARM_JOINT3 RARM_JOINT5:LARM_JOINT4 RARM_JOINT5:LARM_JOINT5 RARM_JOINT5:LARM_JOINT6 RARM_JOINT5:WAIST RARM_JOINT6:LARM_JOINT0 RARM_JOINT6:LARM_JOINT2 RARM_JOINT6:LARM_JOINT3 RARM_JOINT6:LARM_JOINT4 RARM_JOINT6:LARM_JOINT5 RARM_JOINT6:LARM_JOINT6 RARM_JOINT6:WAIST LARM_JOINT2:WAIST LARM_JOINT3:WAIST LARM_JOINT4:WAIST LARM_JOINT5:WAIST LARM_JOINT6:WAIST CHEST_JOINT2:RARM_JOINT3 CHEST_JOINT2:RARM_JOINT4 CHEST_JOINT2:RARM_JOINT5 CHEST_JOINT2:RARM_JOINT6 CHEST_JOINT2:LARM_JOINT3 CHEST_JOINT2:LARM_JOINT4 CHEST_JOINT2:LARM_JOINT5 CHEST_JOINT2:LARM_JOINT6 CHEST_JOINT2:LARM_JOINT2 CHEST_JOINT2:RARM_JOINT2"
+  --conf-file-option "collision_model: convex hull"
+  --conf-file-option "# SequencePlayer optional data (contactStates x 4 + controlSwingTime x 4 (4 is rfsensor, lfsensor, rhsensor, lhsensor)"
+  --conf-file-option "seq_optional_data_dim: 8"
+  --simulation-joint-properties-option "RARM_JOINT1.angle,-0.191986,LARM_JOINT1.angle,0.191986"
+)
+gen_minmax_table_for_closed_robots(JAXON_BLUE JAXON_BLUE JAXON_BLUE)
+
 # CHIDORI
 compile_rbrain_model_for_closed_robots(CHIDORI CHIDORI CHIDORI
   --robothardware-conf-file-option "pdgains.file_name: ${PROJECT_SOURCE_DIR}/models/PDgains.sav"
@@ -380,11 +426,13 @@ compile_rbrain_model_for_closed_robots(CHIDORI CHIDORI CHIDORI
   --conf-file-option "pdgains.file_name: ${PROJECT_SOURCE_DIR}/models/CHIDORI.PDgains.sav"
   --conf-file-option "pdgains_sim_file_name: ${PROJECT_SOURCE_DIR}/models/CHIDORI.PDgains_sim.dat"
   --conf-file-option "abc_leg_offset: 0.0, 0.1, 0.0"
-  --conf-file-option "end_effectors: rleg,RLEG_JOINT5,WAIST,0.0,0.0,-0.110,0.0,0.0,0.0,0.0, lleg,LLEG_JOINT5,WAIST,0.0,0.0,-0.110,0.0,0.0,0.0,0.0,"
+  --conf-file-option "end_effectors: rleg,RLEG_JOINT5,WAIST,0.0,0.0,-0.1065,0.0,0.0,0.0,0.0, lleg,LLEG_JOINT5,WAIST,0.0,0.0,-0.1065,0.0,0.0,0.0,0.0,"
   --conf-dt-option "0.002"
   --simulation-timestep-option "0.002"
   --conf-file-option "collision_loop: 20"
   --conf-file-option "collision_pair: WAIST:LLEG_JOINT2 WAIST:RLEG_JOINT2 LLEG_JOINT2:LLEG_JOINT5 LLEG_JOINT2:RLEG_JOINT2 LLEG_JOINT2:RLEG_JOINT3 LLEG_JOINT2:RLEG_JOINT5 LLEG_JOINT3:RLEG_JOINT2 LLEG_JOINT3:RLEG_JOINT3 LLEG_JOINT3:RLEG_JOINT5 LLEG_JOINT5:RLEG_JOINT2 LLEG_JOINT5:RLEG_JOINT3 LLEG_JOINT5:RLEG_JOINT5 RLEG_JOINT2:RLEG_JOINT5"
+  --conf-file-option "# SequencePlayer optional data (contactStates x 2 + controlSwingTime x 2 (2 is rfsensor, lfsensor)"
+  --conf-file-option "seq_optional_data_dim: 4"
   )
 
 # TQLEG0
@@ -406,6 +454,21 @@ if(EXISTS ${PROJECT_SOURCE_DIR}/models/TESTMDOFARM.wrl)
     TESTMDOFARM)
 endif()
 
+# TABLIS
+compile_rbrain_model_for_closed_robots(TABLIS TABLIS TABLIS
+  --conf-dt-option "0.001"
+  --simulation-timestep-option "0.001"
+  --robothardware-conf-file-option "pdgains.file_name: ${PROJECT_SOURCE_DIR}/models/PDgains.sav"
+  --conf-file-option "pdgains.file_name: ${PROJECT_SOURCE_DIR}/models/PDgains.sav"
+  --conf-file-option "pdgains_sim_file_name: ${PROJECT_SOURCE_DIR}/models/TABLIS.PDgains_sim.dat"
+  --conf-file-option "abc_leg_offset: 0.0, 0.16, 0.0"
+  --conf-file-option "end_effectors: rleg,RLEG_JOINT5,WAIST,0.12,0.0,-0.1352,0.0,0.0,0.0,0.0, lleg,LLEG_JOINT5,WAIST,0.12,0.0,-0.1352,0.0,0.0,0.0,0.0, rarm,RARM_JOINT6,WAIST,0.1,0.0,0.0,0.0,1.0,0.0,1.5708, larm,LARM_JOINT6,WAIST,0.1,0.0,0.0,0.0,1.0,0.0,1.5708,"
+  --conf-file-option "collision_pair: WAIST:LLEG_JOINT2 WAIST:RLEG_JOINT2 LLEG_JOINT2:LLEG_JOINT5 LLEG_JOINT2:RLEG_JOINT2 LLEG_JOINT2:RLEG_JOINT3 LLEG_JOINT2:RLEG_JOINT5 LLEG_JOINT3:RLEG_JOINT2 LLEG_JOINT3:RLEG_JOINT3 LLEG_JOINT3:RLEG_JOINT5 LLEG_JOINT5:RLEG_JOINT2 LLEG_JOINT5:RLEG_JOINT3 LLEG_JOINT5:RLEG_JOINT5 RLEG_JOINT2:RLEG_JOINT5"
+  --conf-file-option "collision_model: convex hull"
+  --conf-file-option "# SequencePlayer optional data (contactStates x 4 + controlSwingTime x 4 (4 is rfsensor, lfsensor, rhsensor, lhsensor)"
+  --conf-file-option "seq_optional_data_dim: 8"
+)
+#gen_minmax_table_for_closed_robots(TABLIS TABLIS TABLIS)
 
 ################################
 ## Generate default simulation launch files and euslisp interface files
@@ -438,10 +501,12 @@ generate_default_launch_eusinterface_files_for_jsk_closed_rbrain_robots(JAXON JA
 if("$ENV{TRAVIS_JOB_ID}" STREQUAL "")
 generate_default_launch_eusinterface_files_for_jsk_closed_rbrain_robots(JAXON_RED JAXON_RED "--use-robot-hrpsys-config")
 endif()
+generate_default_launch_eusinterface_files_for_jsk_closed_rbrain_robots(JAXON_BLUE JAXON_BLUE "--use-robot-hrpsys-config")
 generate_default_launch_eusinterface_files_for_jsk_closed_rbrain_robots(URATALEG URATALEG "--use-robot-hrpsys-config")
 generate_default_launch_eusinterface_files_for_jsk_closed_rbrain_robots(YSTLEG YSTLEG "--use-robot-hrpsys-config")
 generate_default_launch_eusinterface_files_for_jsk_closed_rbrain_robots(CHIDORI CHIDORI "--use-robot-hrpsys-config")
 generate_default_launch_eusinterface_files_for_jsk_closed_rbrain_robots(TQLEG0 TQLEG0 "--use-robot-hrpsys-config")
+generate_default_launch_eusinterface_files_for_jsk_closed_rbrain_robots(TABLIS TABLIS "--use-robot-hrpsys-config")
 generate_default_launch_eusinterface_files(
   "$(find hrpsys_ros_bridge_tutorials)/models/TESTMDOFARM.wrl"
   hrpsys_ros_bridge_tutorials
@@ -565,6 +630,12 @@ if(EXISTS ${hrp2_models_MODEL_DIR}/HRP3HAND_R/HRP3HAND_Rmain.wrl)
   endif(multisense_description_FOUND)
 endif()
 
+# for HIRONXJSK (adding sensor, and fixing some points for gazebo)
+if(${hrp2_models_FOUND})
+  attach_sensor_and_endeffector_to_hrp2jsk_urdf(HIRONXJSK HIRONXJSK.urdf
+    HIRONXJSK_SENSORS.urdf hironxjsk.yaml)
+endif(${hrp2_models_FOUND})
+
 macro (generate_staro_hand_model _robot_name _dir_name)
   set(_model_dir "${PROJECT_SOURCE_DIR}/models/")
   set(_org_model_dir "${jsk_models_MODEL_DIR}/${_dir_name}/")
@@ -671,6 +742,11 @@ if(EXISTS ${jsk_models_MODEL_DIR}/JAXON_RED/l_hand_attached_link.dae)
     endif()
   endif()
 endif()
+endif()
+
+if(${jsk_models_FOUND})
+  attach_sensor_and_endeffector_to_staro_urdf(CHIDORI CHIDORI.urdf CHIDORI_SENSORS.urdf chidori.yaml)
+  attach_sensor_and_endeffector_to_staro_urdf(TABLIS TABLIS.urdf TABLIS_SENSORS.urdf tablis.yaml)
 endif()
 
 # for SampleRobot
